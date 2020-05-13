@@ -20,6 +20,7 @@ git@github.com:funfair-tech/funfair-server-random.git
 git@github.com:funfair-tech/funfair-server-contracts.git
 git@github.com:funfair-tech/funfair-casino-server.git
 git@github.com:funfair-tech/funfair-wallet-server.git
+git@github.com:funfair-tech/funfair-game-metadata.git
 git@github.com:funfair-tech/BuildBot.git
 git@github.com:funfair-tech/CoinBot.git
 git@github.com:funfair-tech/funfair-trulioo-client.git

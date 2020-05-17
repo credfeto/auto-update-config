@@ -1,3 +1,20 @@
 [
-        { "packageId": "Microsoft.Extensions.DependencyInjection.Abstractions", "type": "DI" }
+        { "packageId": "AsyncFixer", "type": "Code analysis" },
+        { "packageId": "DisableDateTimeNow", "type": "Code analysis" },
+        { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis" },
+        { "packageId": "Microsoft.CodeAnalysis.FxCopAnalyzers", "type": "Code analysis" },
+        { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis" },
+        { "packageId": "xunit.analyzers", "type": "Code analysis" },
+        { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis" },
+        { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis" },
+        { "packageId": "Roslynator.Analyzers", "type": "Code analysis" },
+
+        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link" },
+
+        { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure" },
+        { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure" },
+        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure" },
+        { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure" },
+
+        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure" }
 ]

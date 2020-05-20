@@ -10,6 +10,9 @@
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis" },
 
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link" },
+        
+        { "packageId": "Microsoft.CodeAnalysis.Analyzers", "type": "Code Analysis" },
+        { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis" },
 
         { "packageId": "xunit", "type": "Test Infrastructure" },
         { "packageId": "NSubstitute", "type": "Test Infrastructure" },

@@ -11,10 +11,18 @@
 
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link" },
 
+        { "packageId": "xunit", "type": "Test Infrastructure" },
+        { "packageId": "NSubstitute", "type": "Test Infrastructure" },
+        { "packageId": "Castle.Core", "type": "Test Infrastructure" },
         { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure" },
         { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure" },
         { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure" },
         { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure" },
 
-        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure" }
+        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure" },
+        
+        { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling" },
+        { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling" },
+        
+        { "packageId": "HexMate", "type": "Hex to byte conversion" }
 ]

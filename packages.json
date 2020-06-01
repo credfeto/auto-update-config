@@ -27,5 +27,6 @@
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling" },
         { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling" },
         
-        { "packageId": "HexMate", "type": "Hex to byte conversion" }
+        { "packageId": "HexMate", "type": "Hex to byte conversion" },
+        { "packageId": "HtmlAgilityPack", "type": "HTML Parser" }
 ]

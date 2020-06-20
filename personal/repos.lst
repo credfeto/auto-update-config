@@ -1,6 +1,12 @@
 git@github.com:credfeto/action-case-checker.git
+git@github.com:credfeto/action-sql-format.git
+git@github.com:credfeto/action-dotnet-version-detect.git
+git@github.com:credfeto/auto-update-config.git
 git@github.com:credfeto/scratch.git
 git@github.com:credfeto/urlshortener.git
 git@github.com:credfeto/UpdatePackages.git
 git@github.com:credfeto/ImageLoader.git
 git@github.com:credfeto/GallerySync.git
+git@github.com:credfeto/scripts.git
+git@github.com:credfeto/markridgwellcouk.git
+git@github.com:credfeto/markridgwellcom.git

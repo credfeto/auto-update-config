@@ -28,5 +28,6 @@
         { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling" },
         
         { "packageId": "HexMate", "type": "Hex to byte conversion" },
-        { "packageId": "HtmlAgilityPack", "type": "HTML Parser" }
+        { "packageId": "HtmlAgilityPack", "type": "HTML Parser" },
+        { "packageId": "Profanity.Detector", "type": "Profanity detection" }
 ]

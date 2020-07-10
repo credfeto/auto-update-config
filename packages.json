@@ -29,5 +29,6 @@
         
         { "packageId": "HexMate", "type": "Hex to byte conversion" },
         { "packageId": "HtmlAgilityPack", "type": "HTML Parser" },
-        { "packageId": "Profanity.Detector", "type": "Profanity detection" }
+        { "packageId": "Profanity.Detector", "type": "Profanity detection" } ,
+        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection" }
 ]

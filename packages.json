@@ -8,6 +8,7 @@
         { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis" },
         { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis" },
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis" },
+        { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations" },        
 
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link" },
         
@@ -16,7 +17,6 @@
 
         { "packageId": "xunit", "type": "Test Infrastructure" },
         { "packageId": "NSubstitute", "type": "Test Infrastructure" },
-        { "packageId": "Castle.Core", "type": "Test Infrastructure" },
         { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure" },
         { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure" },
         { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure" },
@@ -27,8 +27,14 @@
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling" },
         { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling" },
         
+        { "packageId": "Castle.Core", "type": "Dependency Injection" },
         { "packageId": "HexMate", "type": "Hex to byte conversion" },
         { "packageId": "HtmlAgilityPack", "type": "HTML Parser" },
         { "packageId": "Profanity.Detector", "type": "Profanity detection" } ,
-        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection" }
+        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection" },
+        { "packageId": "FluentValidation.AspNetCore", "type": "Validation" },
+        { "packageId": "IPAddressRange", "type": "IP Addresses" },
+        { "packageId": "UAParser", "type": "User Agent Parser" },
+        { "packageId": "Newtonsoft.Json", "type": "JSON Converter" },
+        { "packageId": "Dapper", "type": "Database infrastructure" }
 ]

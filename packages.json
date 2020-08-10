@@ -36,5 +36,7 @@
         { "packageId": "IPAddressRange", "type": "IP Addresses" },
         { "packageId": "UAParser", "type": "User Agent Parser" },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter" },
-        { "packageId": "Dapper", "type": "Database infrastructure" }
+        { "packageId": "Dapper", "type": "Database infrastructure" },
+  
+        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client" },
 ]

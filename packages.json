@@ -38,5 +38,5 @@
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter" },
         { "packageId": "Dapper", "type": "Database infrastructure" },
   
-        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client" },
+        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client" }
 ]

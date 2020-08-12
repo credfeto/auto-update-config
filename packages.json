@@ -43,6 +43,8 @@
   
         { "packageId": "FunFair.Trulioo.Client", "type": "KYC" },
   
+        { "packageId": "FunFair.Random", "type": "Random Number support" },
+  
         { "packageId": "Octopus.Client", "type": "Octopus" },
         { "packageId": "Discord.Net", "type": "Discord" },
   

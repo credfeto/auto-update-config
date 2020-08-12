@@ -41,5 +41,7 @@
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup" },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection" },
   
+        { "packageId": "FunFair.Trulioo.Client", "type": "KYC" },
+  
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client" }
 ]

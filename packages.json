@@ -37,6 +37,7 @@
         { "packageId": "UAParser", "type": "User Agent Parser" },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter" },
         { "packageId": "Dapper", "type": "Database infrastructure" },
+        { "packageId": "NuGet.Versioning", "type": "Versioning policy" },
   
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup" },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection" },

@@ -49,6 +49,11 @@
   
         { "packageId": "Octopus.Client", "type": "Octopus" },
         { "packageId": "Discord.Net", "type": "Discord" },
+
+
+        { "packageId": "FunFair.Game.Metadata.Client", "type": "Game Metadata Client" },
+        { "packageId": "FunFair.Game.Metadata.Common", "type": "Game Metadata" },
+        { "packageId": "FunFair.Game.Metadata.Shared", "type": "Game Metadata" },
   
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client" }
 ]

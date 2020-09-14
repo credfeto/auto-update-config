@@ -30,7 +30,7 @@ jobs:
       env:
         SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
       run: |-
-        python build_personal.pybuild_personal.py
+        python build_personal.py
         cat README.md
     - name: Commit and push if README changed
       run: |-

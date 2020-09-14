@@ -23,14 +23,8 @@ query {
       }
       nodes {
         name
-        releases(last:1) {
-          totalCount
-          nodes {
-            name
-            publishedAt
-            url
-          }
-        }
+        sshUrl
+        homepageUrl
       }
     }
   }
@@ -92,4 +86,4 @@ if __name__ == "__main__":
     #rewritte
 
     #print(rewritten
-    readme.open("w").write(rewritten)
+    #readme.open("w").write(rewritten)

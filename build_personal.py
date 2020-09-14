@@ -34,7 +34,7 @@ query {
     )
 
 
-def fetch_releases(oauth_token):
+def fetch_repos(oauth_token):
     repos = []
     releases = []
     repo_names = set()
@@ -50,38 +50,28 @@ def fetch_releases(oauth_token):
         print(json.dumps(data, indent=4))
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
+            repos.append(repo["sshUrl"])
             if repo["releases"]["totalCount"] and repo["name"] not in repo_names:
                 repos.append(repo)
-                repo_names.add(repo["name"])
-                releases.append(
-                    {
-                        "repo": repo["name"],
-                        "release": repo["releases"]["nodes"][0]["name"]
-                        .replace(repo["name"], "")
-                        .strip(),
-                        "published_at": repo["releases"]["nodes"][0][
-                            "publishedAt"
-                        ].split("T")[0],
-                        "url": repo["releases"]["nodes"][0]["url"],
-                    }
-                )
+
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
             "hasNextPage"
         ]
         after_cursor = data["data"]["viewer"]["repositories"]["pageInfo"]["endCursor"]
-    return releases
+    return repos
 
 
 if __name__ == "__main__":
     #readme = root / "personal/reporitories.lst"
-    releases = fetch_releases(TOKEN)
-    releases.sort(key=lambda r: r["published_at"], reverse=True)
+    repos = fetch_repos(TOKEN)
+
     md = "\n".join(
         [
-            "* [{repo} {release}]({url}) - {published_at}".format(**release)
-            for release in releases[:5]
+            repo in repos
         ]
     )
+
+    print(md)
     #readme_contents = readme.open().read()
     #rewritte
 

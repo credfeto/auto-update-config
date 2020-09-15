@@ -51,8 +51,6 @@ def fetch_repos(oauth_token):
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
             repos.append(repo["sshUrl"])
-            if repo["releases"]["totalCount"] and repo["name"] not in repo_names:
-                repos.append(repo)
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
             "hasNextPage"

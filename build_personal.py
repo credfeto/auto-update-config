@@ -58,11 +58,11 @@ def fetch_repos(oauth_token):
 
 
 if __name__ == "__main__":
-    reposlist = root / "personal/repos.temp.lst"
+    reposlist = root / "personal/repos.lst"
     repos = fetch_repos(TOKEN)
 
     md = "\n".join(repos)
 
-    print(md)
+    #print(md)
     
     reposlist.open("w").write(md)

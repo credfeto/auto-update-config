@@ -63,11 +63,7 @@ if __name__ == "__main__":
     #readme = root / "personal/reporitories.lst"
     repos = fetch_repos(TOKEN)
 
-    md = "\n".join(
-        [
-            repo in repos
-        ]
-    )
+    md = "\n".join(repos)
 
     print(md)
     #readme_contents = readme.open().read()

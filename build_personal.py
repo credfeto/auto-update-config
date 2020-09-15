@@ -36,8 +36,6 @@ query {
 
 def fetch_repos(oauth_token):
     repos = []
-    releases = []
-    repo_names = set()
     has_next_page = True
     after_cursor = None
 
@@ -60,14 +58,11 @@ def fetch_repos(oauth_token):
 
 
 if __name__ == "__main__":
-    #readme = root / "personal/reporitories.lst"
+    reposlist = root / "personal/repos.temp.lst"
     repos = fetch_repos(TOKEN)
 
     md = "\n".join(repos)
 
     print(md)
-    #readme_contents = readme.open().read()
-    #rewritte
-
-    #print(rewritten
-    #readme.open("w").write(rewritten)
+    
+    reposlist.open("w").write(md)

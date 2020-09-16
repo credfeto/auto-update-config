@@ -51,6 +51,7 @@
         { "packageId": "Octopus.Client", "type": "Octopus" },
         { "packageId": "Discord.Net", "type": "Discord" },
 
+        { "packageId": "Microsoft.ApplicationInsights.AspNetCore", "type": "Microsoft Application Insights" },
 
         { "packageId": "FunFair.Game.Metadata.Client", "type": "Game Metadata Client" },
         { "packageId": "FunFair.Game.Metadata.Common", "type": "Game Metadata" },

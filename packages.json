@@ -9,6 +9,7 @@
         { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis" },
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis" },
         { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations" },        
+        { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis" },
 
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link" },
         

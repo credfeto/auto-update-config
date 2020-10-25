@@ -60,5 +60,7 @@
         { "packageId": "FunFair.Game.Metadata.Common", "type": "Game Metadata", "exact-match": true },
         { "packageId": "FunFair.Game.Metadata.Shared", "type": "Game Metadata", "exact-match": true },
   
-        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client", "exact-match": true }
+        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Proxy Client", "exact-match": true },
+
+        { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false }
 ]

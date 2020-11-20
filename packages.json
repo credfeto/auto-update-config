@@ -60,5 +60,6 @@
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
 
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
-        { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false }
+        { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
+        { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false }
 ]

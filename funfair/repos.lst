@@ -7,6 +7,7 @@ git@github.com:funfair-tech/funfair-server-swagger.git
 git@github.com:funfair-tech/funfair-server-common.git
 git@github.com:funfair-tech/funfair-geo.git
 git@github.com:funfair-tech/funfair-server-random.git
+git@github.com:funfair-tech/funfair-server-rate-limit.git
 git@github.com:funfair-tech/funfair-server-profanity-detector.git
 git@github.com:funfair-tech/funfair-server-ethereum.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server.git

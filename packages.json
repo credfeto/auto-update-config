@@ -31,14 +31,11 @@
         { "packageId": "Castle.Core", "type": "Dependency Injection", "exact-match": true },
         { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true },
         { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true },
-        { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true } ,
-        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection", "exact-match": true },
         { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true },
         { "packageId": "IPAddressRange", "type": "IP Addresses", "exact-match": true },
         { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true },
         { "packageId": "Dapper", "type": "Database infrastructure", "exact-match": true },
-        { "packageId": "NuGet.Versioning", "type": "Versioning policy", "exact-match": true },
   
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
@@ -46,8 +43,14 @@
   
         { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true },
   
+        { "packageId": "AspNetCoreRateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
+        { "packageId": "FunFair.RateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
+        
         { "packageId": "FunFair.Random", "type": "Random Number support", "exact-match": true },
   
+        { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true } ,
+        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection", "exact-match": true },
+        
         { "packageId": "Octopus.Client", "type": "Octopus", "exact-match": true },
         { "packageId": "Discord.Net", "type": "Discord", "exact-match": true },
 
@@ -56,10 +59,13 @@
         { "packageId": "Portable.BouncyCastle", "type": "Crypto", "exact-match": true },
         { "packageId": "Cryptography.ECDSA.Secp256K1", "type": "Crypto", "exact-match": true },
   
+        
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
 
+        { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
+        { "packageId": "NuGet", "type": "Versioning policy", "exact-match": true },
         { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false }
 ]

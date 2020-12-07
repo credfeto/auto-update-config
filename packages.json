@@ -2,7 +2,6 @@
         { "packageId": "AsyncFixer", "type": "Code analysis", "exact-match": true },
         { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true },
         { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true },
-        { "packageId": "Microsoft.CodeAnalysis.FxCopAnalyzers", "type": "Code analysis", "exact-match": true },
         { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },
         { "packageId": "xunit.analyzers", "type": "Code analysis", "exact-match": true },
         { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true },
@@ -65,6 +64,7 @@
 
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
+        { "packageId": "Microsoft.CodeAnalysis", "type": "Code analysis", "exact-match": false },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": true },
         { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false }

@@ -27,3 +27,4 @@ git@github.com:credfeto/action-yaml-format.git
 git@github.com:credfeto/nuget-multi-push.git
 git@github.com:credfeto/changelog-manager.git
 git@github.com:credfeto/opnsense-config.git
+git@github.com:credfeto/nethermind-updater.git

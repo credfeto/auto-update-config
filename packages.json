@@ -9,7 +9,6 @@
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
         { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations", "exact-match": true },        
         { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis", "exact-match": true },
-        { "packageId": "coverlet.collector", "type": "Code Coverage", "exact-match": false },
 
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true },
         
@@ -63,6 +62,7 @@
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
 
+        { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false },
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
         { "packageId": "Microsoft.CodeAnalysis", "type": "Code analysis", "exact-match": false },

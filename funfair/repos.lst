@@ -32,6 +32,7 @@ git@github.com:funfair-tech/funfair-aws-coin-prices.git
 git@github.com:funfair-tech/funfair-aws-gas-prices.git
 git@github.com:funfair-tech/funfair-game-metadata-lambda-win.git
 git@github.com:funfair-tech/funfair-game-metadata-lambda-wagered.git
+git@github.com:funfair-tech/funfair-game-metadata-lambda-pot-counter.git
 git@github.com:funfair-tech/funfair-lambdas.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server-monitor.git

@@ -16,7 +16,7 @@ def make_query(after_cursor=None):
     return """
 query {
   viewer {
-    repositories(first: 100, affiliations:[OWNER], after:AFTER) {
+    repositories(first: 100, affiliations:[OWNER], archived:false, after:AFTER) {
       pageInfo {
         hasNextPage
         endCursor

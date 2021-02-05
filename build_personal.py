@@ -16,7 +16,7 @@ def make_query(after_cursor=None):
     return """
 query {
   viewer {
-    repositories(first: 100, affiliations:[OWNER], archived:false, after:AFTER) {
+    repositories(first: 100, affiliations:[OWNER], after:AFTER) {
       pageInfo {
         hasNextPage
         endCursor
@@ -25,6 +25,7 @@ query {
         name
         sshUrl
         homepageUrl
+        isArchived
       }
     }
   }
@@ -48,7 +49,8 @@ def fetch_repos(oauth_token):
         print(json.dumps(data, indent=4))
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-            repos.append(repo["sshUrl"])
+            if repo["isArchived"] != 'true':
+                repos.append(repo["sshUrl"])
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
             "hasNextPage"

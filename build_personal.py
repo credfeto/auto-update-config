@@ -49,9 +49,8 @@ def fetch_repos(oauth_token):
         print(json.dumps(data, indent=4))
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-            print(repo["sshUrl"])
-            print(repo["isArchived"])
-            if repo["isArchived"] != true:
+            print(repo["sshUrl"] + " => Archived = " + repo["isArchived"])
+            if repo["isArchived"] == "False":
                 repos.append(repo["sshUrl"])
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][

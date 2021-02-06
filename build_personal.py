@@ -35,6 +35,13 @@ query {
     )
 
 
+def isExcluded(sshUrl):
+    if sshUrl == 'git@github.com:credfeto/opnsense-config.git':
+        return True
+
+    return False
+
+
 def fetch_repos(oauth_token):
     repos = []
     has_next_page = True
@@ -50,7 +57,7 @@ def fetch_repos(oauth_token):
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
             print(repo["sshUrl"] + " => Archived = " + str(repo["isArchived"]))
-            if repo["isArchived"] == False:
+            if repo["isArchived"] == False and not isExcluded(repo["sshUrl"]):
                 repos.append(repo["sshUrl"])
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][

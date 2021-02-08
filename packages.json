@@ -65,7 +65,7 @@
         { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false },
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
-        { "packageId": "FunFair.ServerMonitoring.Metrics", "type": "Server monitoring", "exact-match": false },
+        { "packageId": "FunFair.ServerMonitoring", "type": "Server monitoring", "exact-match": false },
         { "packageId": "Microsoft.CodeAnalysis", "type": "Code analysis", "exact-match": false },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": false },

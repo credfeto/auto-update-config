@@ -70,5 +70,5 @@
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": false },
         { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false },
-        { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false },
+        { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false }
 ]

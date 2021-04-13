@@ -25,8 +25,10 @@ git@github.com:funfair-tech/funfair-wallet-server.git
 git@github.com:funfair-tech/funfair-labs-multiplayer-server.git
 git@github.com:funfair-tech/BuildBot.git
 git@github.com:funfair-tech/CoinBot.git
-git@github.com:funfair-tech/funfair-aws-coin-prices.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server-monitor.git
 git@github.com:funfair-tech/funfair-ethereum-token-transfer-history-server-monitor.git
+git@github.com:funfair-tech/funfair-aws-coin-prices.git
 git@github.com:funfair-tech/funfair-exchange-quote.git
+git@github.com:funfair-tech/funfair-network-status.git
+git@github.com:funfair-tech/funfair-aws-gas-prices.git

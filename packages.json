@@ -40,7 +40,8 @@
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
         { "packageId": "FunFair.Server.Geo.Logic", "type": "Geo IP Rules", "exact-match": true },
-  
+
+        { "packageId": "FunFair.Server.Ethereum.Accounts", "type": "Ethereum Server accounts", "exact-match": true },  
         { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true },
   
         { "packageId": "AspNetCoreRateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
@@ -58,10 +59,10 @@
   
         { "packageId": "Portable.BouncyCastle", "type": "Crypto", "exact-match": true },
         { "packageId": "Cryptography.ECDSA.Secp256K1", "type": "Crypto", "exact-match": true },
-  
-        
+          
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
+        { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": true },
 
         { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false },
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },

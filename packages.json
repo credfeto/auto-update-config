@@ -1,78 +1,82 @@
 [
-        { "packageId": "AsyncFixer", "type": "Code analysis", "exact-match": true },
-        { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true },
-        { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true },
-        { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },
-        { "packageId": "xunit.analyzers", "type": "Code analysis", "exact-match": true },
-        { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true },
-        { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis", "exact-match": true },
-        { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
-        { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations", "exact-match": true },        
-        { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis", "exact-match": true },
-
-        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true },
-        
-        { "packageId": "Microsoft.CodeAnalysis.Analyzers", "type": "Code Analysis", "exact-match": true },
-        { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis", "exact-match": true },
-
-        { "packageId": "xunit", "type": "Test Infrastructure", "exact-match": true },
-        { "packageId": "NSubstitute", "type": "Test Infrastructure", "exact-match": true },
-        { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure", "exact-match": true },
-        { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure", "exact-match": true },
-        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure", "exact-match": true },
-        { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure", "exact-match": true },
-
-        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true },
-        
-        { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true },
-        { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling", "exact-match": true },
-        
-        { "packageId": "Castle.Core", "type": "Dependency Injection", "exact-match": true },
-        { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true },
-        { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true },
-        { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true },
-        { "packageId": "IPAddressRange", "type": "IP Addresses", "exact-match": true },
-        { "packageId": "Polly", "type": "Policy based retrying", "exact-match": true },
-        { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true },
-        { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true },
-        { "packageId": "Dapper", "type": "Database infrastructure", "exact-match": true },
-  
-        { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true },
-        { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
-        { "packageId": "FunFair.Server.Geo.Logic", "type": "Geo IP Rules", "exact-match": true },
-
-        { "packageId": "FunFair.Server.Ethereum.Accounts", "type": "Ethereum Server accounts", "exact-match": true },  
-        { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true },
-  
         { "packageId": "AspNetCoreRateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
-        { "packageId": "FunFair.RateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
+        { "packageId": "AsyncFixer", "type": "Code analysis", "exact-match": true },
+        { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false },
 
-        { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true },
-        
-        { "packageId": "FunFair.Random", "type": "Random Number support", "exact-match": true },
-  
-        { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true } ,
-        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection", "exact-match": true },
-        
-        { "packageId": "Octopus.Client", "type": "Octopus", "exact-match": true },
-        { "packageId": "Discord.Net", "type": "Discord", "exact-match": true },
-
-        { "packageId": "Microsoft.ApplicationInsights.AspNetCore", "type": "Microsoft Application Insights", "exact-match": true },
-  
-        { "packageId": "Portable.BouncyCastle", "type": "Crypto", "exact-match": true },
+        { "packageId": "Castle.Core", "type": "Dependency Injection", "exact-match": true },
+        { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false },
         { "packageId": "Cryptography.ECDSA.Secp256K1", "type": "Crypto", "exact-match": true },
-          
+
+        { "packageId": "Dapper", "type": "Database infrastructure", "exact-match": true },
+        { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true },
+        { "packageId": "Discord.Net", "type": "Discord", "exact-match": true },
+        { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling", "exact-match": true },
+  
+        { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true },
+
+        { "packageId": "FunFair.Alerts.Dispatching", "type": "Alert dispatching", "exact-match": true },
+        { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true },
+        { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": true },
 
-        { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false },
-        { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
+
+        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection", "exact-match": true },
+        { "packageId": "FunFair.Random", "type": "Random Number support", "exact-match": true },
+        { "packageId": "FunFair.RateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true },
         { "packageId": "FunFair.ServerMonitoring", "type": "Server monitoring", "exact-match": false },
+        { "packageId": "FunFair.Server.Geo.Logic", "type": "Geo IP Rules", "exact-match": true },
+        { "packageId": "FunFair.Server.Ethereum.Accounts", "type": "Ethereum Server accounts", "exact-match": true },
+        { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },
+        { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true },
+
+        { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true },
+        { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true },
+
+        { "packageId": "IPAddressRange", "type": "IP Addresses", "exact-match": true },
+
+        { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations", "exact-match": true },        
+
+        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true },
+
+        { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true },
+        { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
+
+        { "packageId": "Microsoft.ApplicationInsights.AspNetCore", "type": "Microsoft Application Insights", "exact-match": true },
         { "packageId": "Microsoft.CodeAnalysis", "type": "Code analysis", "exact-match": false },
+        { "packageId": "Microsoft.CodeAnalysis.Analyzers", "type": "Code Analysis", "exact-match": true },
+        { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis", "exact-match": true },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
+        { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis", "exact-match": true },
+
+        { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true },
+        { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true },
+        { "packageId": "NSubstitute", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": false },
-        { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false },
-        { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false }
+
+        { "packageId": "Octopus.Client", "type": "Octopus", "exact-match": true },
+
+        { "packageId": "Polly", "type": "Policy based retrying", "exact-match": true },
+        { "packageId": "Portable.BouncyCastle", "type": "Crypto", "exact-match": true },
+        { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true } ,
+
+        { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
+
+        { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },
+        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true },
+        { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false },
+
+        { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis", "exact-match": true },
+
+        { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true },
+  
+        { "packageId": "xunit", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "xunit.analyzers", "type": "Code analysis", "exact-match": true },
+        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure", "exact-match": true }
 ]

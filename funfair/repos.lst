@@ -10,6 +10,7 @@ git@github.com:funfair-tech/funfair-server-random.git
 git@github.com:funfair-tech/funfair-server-rate-limit.git
 git@github.com:funfair-tech/funfair-server-profanity-detector.git
 git@github.com:funfair-tech/funfair-server-ethereum.git
+git@github.com:funfair-tech/funfair-server-ethereum-networks.git
 git@github.com:funfair-tech/funfair-server-counter-monitoring.git
 git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git

@@ -42,6 +42,7 @@
         { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations", "exact-match": true },        
 
         { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true },
+        { "packageId": "LibSassHost", "type": "SASS Compiler", "exact-match": false },
 
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
@@ -68,6 +69,7 @@
 
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
 
+        { "packageId": "Sendgrid", "type": "Email service", "exact-match": true },
         { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true },
         { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false },

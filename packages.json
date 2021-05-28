@@ -17,6 +17,7 @@
         { "packageId": "FunFair.Alerts.Dispatching", "type": "Alert dispatching", "exact-match": true },
         { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true },
         { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true },
+        { "packageId": "FunFair.Content.Package.Management", "type": "Code analysis", "exact-match": false },
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Balance Client", "exact-match": true },
@@ -53,6 +54,7 @@
         { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis", "exact-match": true },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },
         { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure", "exact-match": true },
+        { "packageId": "Microsoft.VisualStudio.Threading", "type": "Threading helpers", "exact-match": true },
         { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis", "exact-match": true },
 
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true },

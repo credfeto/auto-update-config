@@ -20,7 +20,7 @@
         { "packageId": "FunFair.Content.Package.Management", "type": "Code analysis", "exact-match": false },
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
-        { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Balance Client", "exact-match": true },
+        { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Networks", "exact-match": true },
         { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": true },
 
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },

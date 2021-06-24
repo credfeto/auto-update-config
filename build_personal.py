@@ -39,6 +39,9 @@ def isExcluded(sshUrl):
     if sshUrl == 'git@github.com:credfeto/opnsense-config.git':
         return True
 
+    if sshUrl == 'git@github.com:credfeto/chains.git':
+        return True
+        
     return False
 
 

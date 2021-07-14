@@ -17,11 +17,13 @@
         { "packageId": "FunFair.Alerts.Dispatching", "type": "Alert dispatching", "exact-match": true },
         { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true },
         { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true },
+        { "packageId": "FunFair.Common", "type": "Common", "exact-match": false },
         { "packageId": "FunFair.Content.Package.Management", "type": "Client Packages", "exact-match": false },
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true },
         { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Networks", "exact-match": true },
         { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": true },
+        { "packageId": "FunFair.Ethereum", "type": "Ethereum", "exact-match": false },
 
         { "packageId": "FunFair.Game.Metadata", "type": "Game Metadata", "exact-match": false },
 

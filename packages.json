@@ -78,6 +78,7 @@
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
 
         { "packageId": "Sendgrid", "type": "Email service", "exact-match": true },
+        { "packageId": "Solnet", "type": "Solana C# library", "exact-match": false },
         { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true },
         { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false },

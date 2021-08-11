@@ -42,6 +42,9 @@ def isExcluded(sshUrl):
     if sshUrl == 'git@github.com:credfeto/chains.git':
         return True
         
+    if sshUrl == 'git@github.com:credfeto/infobeamer-browser.git':
+        return True
+
     return False
 
 

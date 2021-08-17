@@ -19,7 +19,6 @@
 // ReSharper disable once EqualExpressionComparison
 // ReSharper disable once ExpressionIsAlwaysNull
 // ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor
-// ReSharper disable once HeapView.BoxingAllocation
 // ReSharper disable once ImpureMethodCallOnReadonlyValueField
 // ReSharper disable once InconsistentlySynchronizedField
 // ReSharper disable once LoopCanBeConvertedToQuery - it might be shorter and in some ways, neater, but it's much harder to understand in that terse form
@@ -33,6 +32,7 @@
 // ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once StringLiteralTypo
 // ReSharper disable once SuspiciousTypeConversion.Global
+// ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once UnusedAutoPropertyAccessor.Global
 // ReSharper disable once UnusedAutoPropertyAccessor.Local

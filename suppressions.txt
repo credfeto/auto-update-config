@@ -2,7 +2,6 @@
 // ReSharper disable once AccessToDisposedClosure
 // ReSharper disable once AccessToDisposedClosure - Both IEnumerable are enumerated inside the using statement,
 // ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
-// ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
 // ReSharper disable once AccessToStaticMemberViaDerivedType
 // ReSharper disable once AssignNullToNotNullAttribute
 // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
@@ -24,7 +23,6 @@
 // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
 // ReSharper disable once PropertyCanBeMadeInitOnly.Global
 // ReSharper disable once RedundantCaseLabel
-// ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once StringLiteralTypo
 // ReSharper disable once SuspiciousTypeConversion.Global

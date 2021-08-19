@@ -1,36 +1,33 @@
 // ReSharper disable once AccessToDisposedClosure
+// ReSharper disable once AccessToDisposedClosure
 // ReSharper disable once AccessToDisposedClosure - Both IEnumerable are enumerated inside the using statement,
 // ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
-// ReSharper disable once AccessToModifiedClosure
+// ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
 // ReSharper disable once AccessToStaticMemberViaDerivedType
 // ReSharper disable once AssignNullToNotNullAttribute
 // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
 // ReSharper disable once ClassNeverInstantiated.Global
-// ReSharper disable once ClassNeverInstantiated.Local
 // ReSharper disable once CollectionNeverUpdated.Local
 // ReSharper disable once CompareNonConstrainedGenericWithNull
-// ReSharper disable once ConditionIsAlwaysTrueOrFalse
 // ReSharper disable once ConstantConditionalAccessQualifier
 // ReSharper disable once ConstantNullCoalescingCondition
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once ConvertToAutoProperty
 // ReSharper disable once ConvertToUsingDeclaration
-// ReSharper disable once EntityNameCapturedOnly.Local
-// ReSharper disable once EqualExpressionComparison
-// ReSharper disable once ExpressionIsAlwaysNull
 // ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor
 // ReSharper disable once ImpureMethodCallOnReadonlyValueField
 // ReSharper disable once InconsistentlySynchronizedField
 // ReSharper disable once LoopCanBeConvertedToQuery - it might be shorter and in some ways, neater, but it's much harder to understand in that terse form
 // ReSharper disable once MemberCanBePrivate.Global
 // ReSharper disable once MemberCanBeProtected.Global
-// ReSharper disable once NotAccessedField.Local
 // ReSharper disable once PossibleNullReferenceException
 // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
 // ReSharper disable once PropertyCanBeMadeInitOnly.Global
 // ReSharper disable once RedundantCaseLabel
 // ReSharper disable once RedundantExtendsListEntry
+// ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once StringLiteralTypo
+// ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
@@ -41,10 +38,7 @@
 // ReSharper disable once UnusedMethodReturnValue.Global
 // ReSharper disable once UnusedMethodReturnValue.Local
 // ReSharper disable once UnusedParameter.Global
-// ReSharper disable once UnusedParameter.Local
 // ReSharper disable once UnusedType.Global
-// ReSharper disable once UnusedType.Local
 // ReSharper disable once UnusedTypeParameter
 // ReSharper disable once UseIndexFromEndExpression
-// ReSharper disable once VirtualMemberCallInConstructor
 [SuppressMessage(category: "ReSharper", checkId: "UnusedType.Global", Justification = "Created by reflection")] // ReSharper disable once UnusedType.Global

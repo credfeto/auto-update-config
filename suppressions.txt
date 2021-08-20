@@ -11,6 +11,7 @@
 // ReSharper disable once ConstantConditionalAccessQualifier
 // ReSharper disable once ConstantNullCoalescingCondition
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
+// ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once ConvertToAutoProperty
 // ReSharper disable once ConvertToUsingDeclaration
 // ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor
@@ -23,6 +24,7 @@
 // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
 // ReSharper disable once PropertyCanBeMadeInitOnly.Global
 // ReSharper disable once RedundantCaseLabel
+// ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once StringLiteralTypo
 // ReSharper disable once SuspiciousTypeConversion.Global

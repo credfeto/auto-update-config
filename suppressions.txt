@@ -1,4 +1,5 @@
 // ReSharper disable once AccessToDisposedClosure
+// ReSharper disable once AccessToDisposedClosure
 // ReSharper disable once AccessToDisposedClosure - Both IEnumerable are enumerated inside the using statement,
 // ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
 // ReSharper disable once AccessToStaticMemberViaDerivedType
@@ -9,6 +10,7 @@
 // ReSharper disable once CompareNonConstrainedGenericWithNull
 // ReSharper disable once ConstantConditionalAccessQualifier
 // ReSharper disable once ConstantNullCoalescingCondition
+// ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once ConvertToAutoProperty
 // ReSharper disable once ConvertToUsingDeclaration
@@ -23,7 +25,9 @@
 // ReSharper disable once PropertyCanBeMadeInitOnly.Global
 // ReSharper disable once RedundantCaseLabel
 // ReSharper disable once RedundantExtendsListEntry
+// ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once StringLiteralTypo
+// ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks

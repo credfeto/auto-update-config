@@ -10,6 +10,7 @@
 // ReSharper disable once ConstantConditionalAccessQualifier
 // ReSharper disable once ConstantNullCoalescingCondition
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
+// ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once ConvertToAutoProperty
 // ReSharper disable once ConvertToUsingDeclaration
 // ReSharper disable once GCSuppressFinalizeForTypeWithoutDestructor

@@ -26,6 +26,7 @@ git@github.com:funfair-tech/funfair-trulioo-client.git
 git@github.com:funfair-tech/funfair-server-ethereum-accounts.git
 git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-server-faucet.git
+git@github.com:funfair-tech/funfair-server-multi-payout.git
 git@github.com:funfair-tech/funfair-wallet-server.git
 git@github.com:funfair-tech/funfair-labs-multiplayer-server.git
 git@github.com:funfair-tech/funfair-labs-nft-server.git

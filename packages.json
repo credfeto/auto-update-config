@@ -66,6 +66,7 @@
 
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true },
+        { "packageId": "NonBlocking", "type": "Non-blocking concurrent collections", "exact-match": true },
         { "packageId": "NSubstitute", "type": "Test Infrastructure", "exact-match": true },
         { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": false },

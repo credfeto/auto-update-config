@@ -10,6 +10,7 @@
         { "packageId": "Dapper", "type": "Database infrastructure", "exact-match": true },
         { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true },
         { "packageId": "Discord.Net", "type": "Discord", "exact-match": true },
+        { "packageId": "Discord.Net.Analyzers", "type": "Discord Analysers", "exact-match": true },
         { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling", "exact-match": true },
   
         { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true },

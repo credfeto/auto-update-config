@@ -56,7 +56,6 @@
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true },
 
         { "packageId": "Microsoft.ApplicationInsights.AspNetCore", "type": "Microsoft Application Insights", "exact-match": true },
-        { "packageId": "Microsoft.CodeAnalysis", "type": "Code analysis", "exact-match": false },
         { "packageId": "Microsoft.CodeAnalysis.Analyzers", "type": "Code Analysis", "exact-match": true },
         { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis", "exact-match": true },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false },

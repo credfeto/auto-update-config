@@ -12,6 +12,7 @@ client = GraphqlClient(endpoint="https://api.github.com/graphql")
 
 TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
 
+
 def make_query(after_cursor=None):
     return """
 query {
@@ -87,10 +88,14 @@ def fetch_repos(oauth_token):
     return repositories
 
 
-if __name__ == "__main__":
+def update():
     repository_list_file = root / "personal/repos.lst"
     repos = fetch_repos(TOKEN)
 
     md = "\n".join(repos)
 
     repository_list_file.open("w").write(md)
+
+
+if __name__ == "__main__":
+    update()

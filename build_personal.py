@@ -26,6 +26,7 @@ query {
         sshUrl
         homepageUrl
         isArchived
+        isFork
       }
     }
   }
@@ -47,6 +48,18 @@ def isExcluded(sshUrl):
 
     return False
 
+def is_updatable_repo(repo):
+    if not repo["isArchived"]:
+        return False
+
+    if not repo["isFork"]:
+        return False
+
+    if isExcluded(repo["sshUrl"]):
+        return False
+
+    return True
+
 
 def fetch_repos(oauth_token):
     repos = []
@@ -62,8 +75,8 @@ def fetch_repos(oauth_token):
         print(json.dumps(data, indent=4))
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-            print(repo["sshUrl"] + " => Archived = " + str(repo["isArchived"]))
-            if repo["isArchived"] == False and not isExcluded(repo["sshUrl"]):
+            print(repo["sshUrl"] + " => Archived = " + str(repo["isArchived"]) + " => IsFork = " + str(repo["isFork"]))
+            if is_updatable_repo(repo):
                 repos.append(repo["sshUrl"])
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][

@@ -36,17 +36,18 @@ query {
     )
 
 
-def isExcluded(sshUrl):
-    if sshUrl == 'git@github.com:credfeto/opnsense-config.git':
+def is_excluded(ssh_url):
+    if ssh_url == 'git@github.com:credfeto/opnsense-config.git':
         return True
 
-    if sshUrl == 'git@github.com:credfeto/chains.git':
+    if ssh_url == 'git@github.com:credfeto/chains.git':
         return True
         
-    if sshUrl == 'git@github.com:credfeto/infobeamer-browser.git':
+    if ssh_url == 'git@github.com:credfeto/infobeamer-browser.git':
         return True
 
     return False
+
 
 def is_updatable_repo(repo):
     if not repo["isArchived"]:
@@ -55,14 +56,14 @@ def is_updatable_repo(repo):
     if not repo["isFork"]:
         return False
 
-    if isExcluded(repo["sshUrl"]):
+    if is_excluded(repo["sshUrl"]):
         return False
 
     return True
 
 
 def fetch_repos(oauth_token):
-    repos = []
+    repositories = []
     has_next_page = True
     after_cursor = None
 
@@ -77,21 +78,19 @@ def fetch_repos(oauth_token):
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
             print(repo["sshUrl"] + " => Archived = " + str(repo["isArchived"]) + " => IsFork = " + str(repo["isFork"]))
             if is_updatable_repo(repo):
-                repos.append(repo["sshUrl"])
+                repositories.append(repo["sshUrl"])
 
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
             "hasNextPage"
         ]
         after_cursor = data["data"]["viewer"]["repositories"]["pageInfo"]["endCursor"]
-    return repos
+    return repositories
 
 
 if __name__ == "__main__":
-    reposlist = root / "personal/repos.lst"
+    repository_list_file = root / "personal/repos.lst"
     repos = fetch_repos(TOKEN)
 
     md = "\n".join(repos)
 
-    #print(md)
-    
-    reposlist.open("w").write(md)
+    repository_list_file.open("w").write(md)

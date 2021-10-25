@@ -51,10 +51,10 @@ def is_excluded(ssh_url):
 
 
 def is_updatable_repo(repo):
-    if not repo["isArchived"]:
+    if repo["isArchived"]:
         return False
 
-    if not repo["isFork"]:
+    if repo["isFork"]:
         return False
 
     if is_excluded(repo["sshUrl"]):

@@ -78,6 +78,7 @@
 
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true },
 
+        { "packageId": "ScottPlot", "type": "Graphing", "exact-match": true },
         { "packageId": "Sendgrid", "type": "Email service", "exact-match": true },
         { "packageId": "Solnet", "type": "Solana C# library", "exact-match": false },
         { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true },

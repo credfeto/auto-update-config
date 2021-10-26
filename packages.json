@@ -62,6 +62,7 @@
         { "packageId": "Microsoft.NET.Test.Sdk", "type": "Test Infrastructure", "exact-match": true },
         { "packageId": "Microsoft.VisualStudio.Threading", "type": "Threading helpers", "exact-match": true },
         { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis", "exact-match": true },
+        { "packageId": "MSBuild.Sdk.SqlProj", "type": "DacPac / SQL generation", "exact-match": true },
 
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true },

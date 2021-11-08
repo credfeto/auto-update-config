@@ -8,4 +8,5 @@
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
+// ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once UnusedMember.Global

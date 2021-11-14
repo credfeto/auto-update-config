@@ -20,13 +20,13 @@ git@github.com:funfair-tech/funfair-server-metamask-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-wallet-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-funkey-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-client-package.git
+git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server.git
 git@github.com:funfair-tech/funfair-ethereum-token-transfer-history-server.git
 git@github.com:funfair-tech/funfair-server-alerts.git
 git@github.com:funfair-tech/funfair-trulioo-client.git
 git@github.com:funfair-tech/funfair-server-ethereum-accounts.git
-git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-server-faucet.git
 git@github.com:funfair-tech/funfair-server-multi-payout.git
 git@github.com:funfair-tech/funfair-wallet-server.git

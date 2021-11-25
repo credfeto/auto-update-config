@@ -16,6 +16,7 @@ git@github.com:funfair-tech/funfair-server-multi-call.git
 git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
+git@github.com:funfair-tech/funfair-server-metamask-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-wallet-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-funkey-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-client-package.git

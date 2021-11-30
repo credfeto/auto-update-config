@@ -7,10 +7,10 @@
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
 // ReSharper disable once LoopCanBeConvertedToQuery - it might be shorter and in some ways, neater, but it's much harder to understand in that terse form
 // ReSharper disable once MemberCanBeProtected.Global
+// ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
 // ReSharper disable once RedundantCaseLabel
 // ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once RedundantExtendsListEntry
-// ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks
 // ReSharper disable once TailRecursiveCall - this is not tail recursive despite what R# thinks

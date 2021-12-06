@@ -1,5 +1,4 @@
 // ReSharper disable once AccessToDisposedClosure
-// ReSharper disable once AccessToDisposedClosure
 // ReSharper disable once AccessToDisposedClosure - The IEnumerable is enumerated inside the using statement, connection can't be disposed before
 // ReSharper disable once CollectionNeverUpdated.Local
 // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
@@ -7,7 +6,6 @@
 // ReSharper disable once LoopCanBeConvertedToQuery - it might be shorter and in some ways, neater, but it's much harder to understand in that terse form
 // ReSharper disable once MemberCanBeProtected.Global
 // ReSharper disable once RedundantCaseLabel
-// ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once RedundantExtendsListEntry
 // ReSharper disable once SuspiciousTypeConversion.Global
 // ReSharper disable once SuspiciousTypeConversion.Global

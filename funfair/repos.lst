@@ -5,7 +5,7 @@ git@github.com:funfair-tech/funfair-build-check.git
 git@github.com:funfair-tech/funfair-build-version.git
 git@github.com:funfair-tech/funfair-server-swagger.git
 git@github.com:funfair-tech/funfair-server-common.git
-git@github.com:funfair-tech/funfair-geo.git
+git@github.com:funfair-tech/funfair-server-geo.git
 git@github.com:funfair-tech/funfair-server-random.git
 git@github.com:funfair-tech/funfair-server-rate-limit.git
 git@github.com:funfair-tech/funfair-server-profanity-detector.git

@@ -31,7 +31,7 @@
         { "packageId": "FunFair.ServerMonitoring", "type": "Server monitoring", "exact-match": false },
         { "packageId": "FunFair.Server.Client.Package", "type": "Client package", "exact-match": true },
         { "packageId": "FunFair.Client", "type": "Client package", "exact-match": false },
-        { "packageId": "FunFair.Server.Geo.Logic", "type": "Geo IP Rules", "exact-match": true },
+        { "packageId": "FunFair.Geo.Logic", "type": "Geo IP Rules", "exact-match": true },
         { "packageId": "FunFair.Server.Ethereum.Accounts", "type": "Ethereum Server accounts", "exact-match": true },
         { "packageId": "FunFair.SignalR", "type": "SignalR Helpers", "exact-match": false },
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false },

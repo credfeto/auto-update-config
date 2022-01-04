@@ -84,9 +84,9 @@
         
         
 
-        { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "AsyncFixer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "codecracker.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
+        { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Discord.Net.Analyzers", "type": "Discord Analysers", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Meziantou.Analyzer", "type": "Code Analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },

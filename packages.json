@@ -96,6 +96,7 @@
         { "packageId": "Nullable.Extended.Analyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Philips.CodeAnalysis.DuplicateCodeAnalyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
+        { "packageId": "Philips.CodeAnalysis.MaintainabilityAnalyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "SecurityCodeScan.VS2019", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "SmartAnalyzers.CSharpExtensions.Annotations", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },

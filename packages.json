@@ -47,6 +47,8 @@
         { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "LibSassHost", "type": "SASS Compiler", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
+        { "packageId": "MailKit", "type": "Emails", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 

@@ -46,6 +46,9 @@ def is_excluded(ssh_url):
         
     if ssh_url == 'git@github.com:credfeto/infobeamer-browser.git':
         return True
+    
+    if ssh_url == 'git@github.com:credfeto/credfeto-batch-updates:
+        return True
 
     return False
 

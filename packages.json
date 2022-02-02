@@ -76,6 +76,8 @@
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "System.IdentityModel.Tokens.Jwt", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "System.Interactive.Async", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "System.Reactive", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
 

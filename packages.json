@@ -19,7 +19,7 @@
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Networks", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum.Faucet", "type": "Ethereum Faucet", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum", "type": "Ethereum", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 

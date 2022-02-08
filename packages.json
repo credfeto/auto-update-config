@@ -71,6 +71,7 @@
         { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false } ,
 
         { "packageId": "ScottPlot", "type": "Graphing", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "Secp256k1.Native", "type": "Bitcoin/Ethereum crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Sendgrid", "type": "Email service", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Solnet", "type": "Solana C# library", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },

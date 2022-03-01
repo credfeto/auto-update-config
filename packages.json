@@ -81,7 +81,8 @@
         { "packageId": "System.Reactive", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-
+        { "packageId": "TwitchLib", "type": "Twitch API", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        
         { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
   
         { "packageId": "xunit", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },

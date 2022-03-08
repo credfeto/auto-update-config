@@ -14,6 +14,7 @@
   
         { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
+        { "packageId": "FunFair.Authentication", "type": "Authentication", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Alerts.Dispatching", "type": "Alert dispatching", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Common", "type": "Common", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },

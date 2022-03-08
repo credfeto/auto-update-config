@@ -38,6 +38,7 @@
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "FunFair.Wrecking.League.Contracts", "type": "Wrecking League Contract ABI's", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },

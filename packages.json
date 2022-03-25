@@ -57,6 +57,8 @@
 
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        
+        { "packageId": "MediatR", "type": "Simple, unambitious mediator", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "Microsoft.ApplicationInsights.AspNetCore", "type": "Microsoft Application Insights", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Microsoft.Extensions", "type": "Microsoft Extensions", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },

@@ -370,18 +370,6 @@ def has_existing_check(existing_settings, name):
 
 
 def update_repo_settings(owner, name):
-    data = client.execute(
-        query=make_query_repo_settings(owner, name),
-        headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)}
-        )
-
-    print()
-    print(json.dumps(data, indent=4))
-    print()
-
-    settings = data["data"]["repository"]
-
-    repo_id = settings["id"]
     repo_settings = {
         "has_issues": True,
         "has_projects": False,
@@ -393,18 +381,8 @@ def update_repo_settings(owner, name):
         "delete_branch_on_merge": True
     }
 
-    result = patch_github("/repos/"+ owner + "/" + name, repo_settings)
+    patch_github("/repos/" + owner + "/" + name, repo_settings)
 
-    print()
-    print(json.dumps(result, indent=4))
-    print()
-
-#    if not settings["hasIssuesEnabled"] or not settings["hasWikiEnabled"]  or not settings["hasProjectsEnabled"]:
-#        print("Update repo settings: " + repo_id)
-#        client.execute(
-#           query=make_update_repo_settings_mutation(repo_id),
-#           headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)},
-#            )
 
 def add_existing_github_check(existing_settings, new_settings, build_name):
     if has_existing_check(existing_settings, build_name):

@@ -378,7 +378,7 @@ def update():
 
         repo_parts = repo_url_to_owner_and_name(repo)
         if repo_parts:
-            update_repo_settings(repo_parts["owner"], repo_parts["name"])
+            update_repo_settings(repo_parts["owner"], repo_parts["repo"])
 
             if repo == 'git@github.com:credfeto/auto-update-config.git':
                 continue

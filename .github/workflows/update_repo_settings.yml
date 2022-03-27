@@ -1,0 +1,39 @@
+name: Update FunFair Server Repo Settings
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - personal/repos.lst
+      - update_repos.py
+      - requirements.txt
+      - .github/workflows/update_repo_settings.yml
+  schedule:
+    - cron:  '55 * * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2.4.0
+    - name: Set up Python
+      uses: actions/setup-python@v2.3.1
+      with:
+        python-version: 3.8
+    - uses: actions/cache@v2.1.7
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install Python dependencies
+      run: |
+        python -m pip install -r requirements.txt
+    - name: Update Repos
+      env:
+        SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
+      run: |-
+        python update_repos.py

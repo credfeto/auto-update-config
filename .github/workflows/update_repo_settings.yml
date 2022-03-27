@@ -1,4 +1,4 @@
-name: Update FunFair Server Repo Settings
+name: Update Repo Settings
 
 on:
   push:

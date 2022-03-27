@@ -298,6 +298,13 @@ def has_existing_check(existing_settings, name):
     return False
 
 
+def add_existing_github_check(existing_settings, new_settings, build_name):
+    if has_existing_check(existing_settings, build_name):
+        print("****** Found Matching Build: " + build_name)
+        add_github_build(new_settings, build_name)
+        print(new_settings)
+
+
 def update():
     if GITHUB_TOKEN == "":
         raise "Invalid Github token"
@@ -320,19 +327,11 @@ def update():
             new_settings = base_main_branch_protection_settings()
             print(new_settings)
 
-            if matching_build:
-                print("****** Found Matching Build!")
-                add_teamcity_build(new_settings, matching_build)
-                print(new_settings)
-
             existing_settings = get_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'master')
             print(existing_settings)
 
             if existing_settings:
-                if has_existing_check(existing_settings, "build-contracts"):
-                    print("****** Found Matching Build!")
-                    add_github_build(new_settings, matching_build)
-                    print(new_settings)
+                add_existing_github_check(existing_settings, new_settings, "build-contracts")
 
                 print("**** CHECK UPDATE")
                 changed = have_branch_protection_settings_changed(existing_settings, new_settings)

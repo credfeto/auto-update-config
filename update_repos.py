@@ -58,6 +58,7 @@ mutation SetRepoSettings {
         "NODE_ID", repo_id
     )
 
+
 def base_main_branch_protection_settings():
     return {
         "required_status_checks": {
@@ -291,6 +292,38 @@ def put_github(path, data):
     return json.loads(content)
 
 
+def patch_github(path, data):
+    url = github_api_base_url + path
+
+    print("Connect to PATCH " + url)
+    #    print("Token: " + TEAMCITY_TOKEN)
+
+    token = basic_auth(GITHUB_USER, GITHUB_TOKEN)
+
+    json_data = json.dumps(data)
+    print(json_data)
+    post_data = json_data.encode()
+
+    request = Request(url=url, data=post_data, method='PATCH')
+
+    request.add_header('Accept', 'application/json')
+    request.add_header('Accept-Encoding', 'deflate, gzip')
+    request.add_header('Content-Type', 'application/json')
+    request.add_header('Authorization', 'BASIC ' + token)
+    request.add_header('User-Agent', USER_AGENT)
+    print(request.get_method())
+
+    response = urlopen(request)
+
+    content = response.read()
+    try:
+        content = gzip.decompress(content)
+    except gzip.BadGzipFile as e:
+        return json.loads(content)
+
+    return json.loads(content)
+
+
 def repo_url_to_owner_and_name(repo_url):
     # git@github.com:funfair-tech/funfair-games.git
     # https://github.com/funfair-tech/funfair-labs-tictactoe-server
@@ -335,6 +368,7 @@ def has_existing_check(existing_settings, name):
 
     return False
 
+
 def update_repo_settings(owner, name):
     data = client.execute(
         query=make_query_repo_settings(owner, name),
@@ -347,13 +381,30 @@ def update_repo_settings(owner, name):
 
     settings = data["data"]["repository"]
 
-    if not settings["hasIssuesEnabled"] or not settings["hasWikiEnabled"]  or not settings["hasProjectsEnabled"]:
-        repo_id = settings["id"]
-        print("Update repo settings: " + repo_id)
-        client.execute(
-           query=make_update_repo_settings_mutation(repo_id),
-           headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)},
-            )
+    repo_id = settings["id"]
+    repo_settings = {
+        "has_issues": True,
+        "has_projects": False,
+        "has_wiki": False,
+        "allow_squash_merge": False,
+        "allow_merge_commit": True,
+        "allow_rebase_merge": False,
+        "allow_auto_merge": True,
+        "delete_branch_on_merge": True
+    }
+
+    result = patch_github("/repos/"+ owner + "/" + name, repo_settings)
+
+    print()
+    print(json.dumps(result, indent=4))
+    print()
+
+#    if not settings["hasIssuesEnabled"] or not settings["hasWikiEnabled"]  or not settings["hasProjectsEnabled"]:
+#        print("Update repo settings: " + repo_id)
+#        client.execute(
+#           query=make_update_repo_settings_mutation(repo_id),
+#           headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)},
+#            )
 
 def add_existing_github_check(existing_settings, new_settings, build_name):
     if has_existing_check(existing_settings, build_name):

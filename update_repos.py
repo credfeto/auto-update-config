@@ -1,4 +1,3 @@
-from python_graphql_client import GraphqlClient
 import base64
 import urllib.parse
 
@@ -13,50 +12,11 @@ from urllib.request import Request, urlopen
 
 root = pathlib.Path(__file__).parent.resolve()
 github_api_base_url = "https://api.github.com"
-client = GraphqlClient(endpoint="https://api.github.com/graphql")
 
 GITHUB_USER = "credfeto"
 GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
 TEAMCITY_TOKEN = os.environ.get("TEAMCITY_READ_API_KEY", "")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.56"
-
-
-def make_query_repo_settings(owner, name):
-    return """
-query GetRepoSettings
-{
-  repository(name: "NAME", owner: "OWNER") {
-    id
-    hasIssuesEnabled
-    hasWikiEnabled
-    hasProjectsEnabled    
-  }
-}""".replace(
-        "NAME", name
-    ).replace(
-        "OWNER", owner
-    )
-
-
-def make_update_repo_settings_mutation(repo_id):
-    return """
-mutation SetRepoSettings {
-  updateRepository(input:{
-    repositoryId:"NODE_ID",
-    hasIssuesEnabled: true,
-    hasWikiEnabled: false,
-    hasProjectsEnabled: false}) {
-    clientMutationId
-    repository {
-      hasIssuesEnabled
-      hasWikiEnabled
-      hasProjectsEnabled
-    }
-  }
-}
-""".replace(
-        "NODE_ID", repo_id
-    )
 
 
 def base_main_branch_protection_settings():

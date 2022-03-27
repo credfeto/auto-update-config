@@ -1,3 +1,4 @@
+from python_graphql_client import GraphqlClient
 import base64
 import urllib.parse
 
@@ -12,13 +13,50 @@ from urllib.request import Request, urlopen
 
 root = pathlib.Path(__file__).parent.resolve()
 github_api_base_url = "https://api.github.com"
-
+client = GraphqlClient(endpoint="https://api.github.com/graphql")
 
 GITHUB_USER = "credfeto"
 GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
 TEAMCITY_TOKEN = os.environ.get("TEAMCITY_READ_API_KEY", "")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.56"
 
+
+def make_query_repo_settings(owner, name):
+    return """
+query GetRepoSettings
+{
+  repository(name: "NAME", owner: "OWNER") {
+    id
+    hasIssuesEnabled
+    hasWikiEnabled
+    hasProjectsEnabled    
+  }
+}""".replace(
+        "NAME", name
+    ).replace(
+        "OWNER", owner
+    )
+
+
+def make_update_repo_settings_mutation(repo_id):
+    return """
+mutation SetRepoSettings {
+  updateRepository(input:{
+    repositoryId:"NODE_ID",
+    hasIssuesEnabled: true,
+    hasWikiEnabled: false,
+    hasProjectsEnabled: false}) {
+    clientMutationId
+    repository {
+      hasIssuesEnabled
+      hasWikiEnabled
+      hasProjectsEnabled
+    }
+  }
+}
+""".replace(
+        "NODE_ID", repo_id
+    )
 
 def base_main_branch_protection_settings():
     return {
@@ -297,6 +335,25 @@ def has_existing_check(existing_settings, name):
 
     return False
 
+def update_repo_settings(owner, name):
+    data = client.execute(
+        query=make_query_repo_settings(owner, name),
+        headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)}
+        )
+
+    print()
+    print(json.dumps(data, indent=4))
+    print()
+
+    settings = data["data"]["repository"]
+
+    if not settings["hasIssuesEnabled"] or not settings["hasWikiEnabled"]  or not settings["hasProjectsEnabled"]:
+        repo_id = settings["id"]
+        print("Update repo settings: " + repo_id)
+        client.execute(
+           query=make_update_repo_settings_mutation(repo_id),
+           headers={"Authorization": "Bearer {}".format(GITHUB_TOKEN)},
+            )
 
 def add_existing_github_check(existing_settings, new_settings, build_name):
     if has_existing_check(existing_settings, build_name):
@@ -318,11 +375,13 @@ def update():
     for repo in repos:
         print("*****************************************************************************")
         print(repo)
-        if repo == 'git@github.com:credfeto/auto-update-config.git':
-            continue
-            
+
         repo_parts = repo_url_to_owner_and_name(repo)
         if repo_parts:
+            update_repo_settings(repo_parts["owner"], repo_parts["name"])
+
+            if repo == 'git@github.com:credfeto/auto-update-config.git':
+                continue
 
             new_settings = base_main_branch_protection_settings()
             print(new_settings)

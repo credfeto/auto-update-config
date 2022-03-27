@@ -338,7 +338,8 @@ def update_repo_settings(owner, name):
         "allow_merge_commit": True,
         "allow_rebase_merge": False,
         "allow_auto_merge": True,
-        "delete_branch_on_merge": True
+        "delete_branch_on_merge": True,
+        "allow_update_branch": True
     }
 
     patch_github("/repos/" + owner + "/" + name, repo_settings)

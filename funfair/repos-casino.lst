@@ -7,3 +7,5 @@ git@github.com:funfair-tech/funfair-aws-gas-prices.git
 git@github.com:funfair-tech/funfair-game-metadata-lambda-win.git
 git@github.com:funfair-tech/funfair-game-metadata-lambda-wagered.git
 git@github.com:funfair-tech/funfair-lambdas.git
+git@github.com:funfair-tech/funfair-server-metamask-jwt-authentication.git
+git@github.com:funfair-tech/funfair-server-profanity-detector.git

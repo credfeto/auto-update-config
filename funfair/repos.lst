@@ -11,7 +11,6 @@ git@github.com:funfair-tech/funfair-server-common.git
 git@github.com:funfair-tech/funfair-server-geo.git
 git@github.com:funfair-tech/funfair-server-random.git
 git@github.com:funfair-tech/funfair-server-rate-limit.git
-git@github.com:funfair-tech/funfair-server-profanity-detector.git
 git@github.com:funfair-tech/funfair-server-counter-monitoring.git
 git@github.com:funfair-tech/funfair-server-ethereum.git
 git@github.com:funfair-tech/funfair-server-ethereum-networks.git
@@ -19,9 +18,7 @@ git@github.com:funfair-tech/funfair-server-multi-call.git
 git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
-git@github.com:funfair-tech/funfair-server-metamask-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-wallet-jwt-authentication.git
-git@github.com:funfair-tech/funfair-server-funkey-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-client-package.git
 git@github.com:funfair-tech/funfair-server-client-package-wallet-rewriter.git
 git@github.com:funfair-tech/funfair-server-signalr-hub.git
@@ -36,13 +33,6 @@ git@github.com:funfair-tech/funfair-server-faucet.git
 git@github.com:funfair-tech/funfair-server-single-payout.git
 git@github.com:funfair-tech/funfair-server-multi-payout.git
 git@github.com:funfair-tech/funfair-wallet-server.git
-git@github.com:funfair-tech/funfair-server-wrecking-league-contracts.git
-git@github.com:funfair-tech/funfair-nft-metadata-server.git
-git@github.com:funfair-tech/funfair-nft-mint-server.git
-git@github.com:funfair-tech/funfair-game-storage-server.git
-git@github.com:funfair-tech/funfair-game-payments-server.git
-git@github.com:funfair-tech/funfair-labs-nft-server.git
-git@github.com:funfair-tech/funfair-racers-web-game-server.git
 git@github.com:funfair-tech/funfair-server-balance-bot.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server-monitor.git

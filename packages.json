@@ -75,7 +75,6 @@
         { "packageId": "Secp256k1.Native", "type": "Bitcoin/Ethereum crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Sendgrid", "type": "Email service", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "SixLabors.ImageSharp", "type": "Image Processing", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "Solnet", "type": "Solana C# library", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "System.IdentityModel.Tokens.Jwt", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "System.Interactive.Async", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },

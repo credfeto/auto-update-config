@@ -15,7 +15,6 @@
         { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "FunFair.Authentication", "type": "Authentication", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Alerts.Dispatching", "type": "Alert dispatching", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Common", "type": "Common", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Content.Package.Management", "type": "Client Packages", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
@@ -28,8 +27,6 @@
         { "packageId": "FunFair.Ethereum.MultiCall", "type": "Ethereum Mult-Call optimizations", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum", "type": "Ethereum", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
-        { "packageId": "FunFair.Nft.Metadata", "type": "NFT Metadata", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.ProfanityDetector", "type": "Profanity detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Random", "type": "Random Number support", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.RateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.ServerMonitoring", "type": "Server monitoring", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
@@ -41,7 +38,6 @@
         { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "FunFair.Trulioo.Client", "type": "KYC", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Wrecking.League.Contracts", "type": "Wrecking League Contract ABI's", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
@@ -90,7 +86,7 @@
         { "packageId": "System.Reactive", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "TeamCity.VSTest.TestAdapter", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "XXXXXXTwitchLib", "type": "Twitch API", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "TwitchLib", "type": "Twitch API", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         
         { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
   

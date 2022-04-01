@@ -49,8 +49,6 @@
         { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "LibSassHost", "type": "SASS Compiler", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
-        { "packageId": "MailKit", "type": "Emails", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
         { "packageId": "MaxMind.GeoIP2", "type": "IP: Country Lookup", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "MaxMind.MinFraud", "type": "IP: Fraud detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         
@@ -72,14 +70,12 @@
 
         { "packageId": "Polly", "type": "Policy based retrying", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Portable.BouncyCastle", "type": "Crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "Profanity.Detector", "type": "Profanity detection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false } ,
-
+        
         { "packageId": "ScottPlot", "type": "Graphing", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Secp256k1.Native", "type": "Bitcoin/Ethereum crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Sendgrid", "type": "Email service", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "SixLabors.ImageSharp", "type": "Image Processing", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "Solnet", "type": "Solana C# library", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Swashbuckle", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "System.IdentityModel.Tokens.Jwt", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "System.Interactive.Async", "type": "Reactive extensions/Observable", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
@@ -113,6 +109,7 @@
         { "packageId": "SecurityCodeScan.VS2019", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "SmartAnalyzers.CSharpExtensions.Annotations", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
+        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
         { "packageId": "xunit.analyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true }
 ]

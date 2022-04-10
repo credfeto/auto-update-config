@@ -25,10 +25,6 @@ def base_main_branch_protection_settings():
             "strict": True,
             "checks": [
                 {
-                    "context": "include-JIRA-ticket",
-                    "app_id": 15368
-                },
-                {
                     "context": "does-not-contain-secrets",
                     "app_id": 15368
                 },
@@ -54,6 +50,10 @@ def base_main_branch_protection_settings():
                 },
                 {
                     "context": "lint-code",
+                    "app_id": 15368
+                },
+                {
+                    "context": "dependency-review",
                     "app_id": 15368
                 }
             ]

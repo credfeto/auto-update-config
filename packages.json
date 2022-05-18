@@ -3,6 +3,7 @@
         { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 
         { "packageId": "Castle.Core", "type": "Dependency Injection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "CommandLineParser", "type": "Command line parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Cryptography.ECDSA.Secp256K1", "type": "Crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 

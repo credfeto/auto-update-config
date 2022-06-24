@@ -63,6 +63,7 @@
         { "packageId": "NBitcoin", "type": "BitCoin/BIP39 key handling", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "Newtonsoft.Json", "type": "JSON Converter", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "NonBlocking", "type": "Non-blocking concurrent collections", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        { "packageId": "Npgsql", "type": "PostgreSQL Data provider", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "NSubstitute", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
         { "packageId": "NuGet", "type": "Versioning policy", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
 

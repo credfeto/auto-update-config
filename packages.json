@@ -191,7 +191,7 @@
         {
                 "packageId": "Credfeto.ImageLoader",
                 "type": "Image Loader",
-                "exact-match": false,
+                "exact-match": true,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false
         },

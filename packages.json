@@ -1,22 +1,242 @@
 [
-        { "packageId": "AspNetCoreRateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "AWSSDK", "type": "AWS SDK", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "Castle.Core", "type": "Dependency Injection", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "CommandLineParser", "type": "Command line parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "coverlet", "type": "Code Coverage", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Cryptography.ECDSA.Secp256K1", "type": "Crypto", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "Credfeto.ImageLoader", "type": "Image Loader", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        
-        { "packageId": "Dapper", "type": "Database infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "Discord.Net", "type": "Discord", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "dotnetstandard-bip39", "type": "BIP39 key handling", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-  
-        { "packageId": "FluentValidation.AspNetCore", "type": "Validation", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "FunFair.Authentication", "type": "Authentication", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Balance.Bot.Client", "type": "House account balance monitoring", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        {
+                "packageId": "AsyncFixer",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "codecracker.CSharp",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "DisableDateTimeNow",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Discord.Net.Analyzers",
+                "type": "Discord Analysers",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "FunFair.CodeAnalysis",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Meziantou.Analyzer",
+                "type": "Code Analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Microsoft.CodeAnalysis.Analyzers",
+                "type": "Code Analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+                "type": "Code Analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Microsoft.VisualStudio.Threading.Analyzers",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Nullable.Extended.Analyzer",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "NSubstitute.Analyzers.CSharp",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Philips.CodeAnalysis.DuplicateCodeAnalyzer",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Philips.CodeAnalysis.MaintainabilityAnalyzers",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Roslynator.Analyzers",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "SecurityCodeScan.VS2019",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "SmartAnalyzers.CSharpExtensions.Annotations",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "SonarAnalyzer.CSharp",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "SourceLink.Create.CommandLine",
+                "type": "Source Link",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "ToStringWithoutOverrideAnalyzer",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "xunit.analyzers",
+                "type": "Code analysis",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "AspNetCoreRateLimit",
+                "type": "ASP.NET Core API Rate Limiting",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "AWSSDK",
+                "type": "AWS SDK",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Castle.Core",
+                "type": "Dependency Injection",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "CommandLineParser",
+                "type": "Command line parser",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "coverlet",
+                "type": "Code Coverage",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "Cryptography.ECDSA.Secp256K1",
+                "type": "Crypto",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Credfeto.Extensions.Configuration.Typed.Json",
+                "type": "Strongly typed and verified configuration",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Credfeto.ImageLoader",
+                "type": "Image Loader",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Dapper",
+                "type": "Database infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Discord.Net",
+                "type": "Discord",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "dotnetstandard-bip39",
+                "type": "BIP39 key handling",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
+                "packageId": "FluentValidation.AspNetCore",
+                "type": "Validation",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "FunFair.Authentication",
+                "type": "Authentication",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "FunFair.Balance.Bot.Client",
+                "type": "House account balance monitoring",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
         { "packageId": "FunFair.Common", "type": "Common", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Content.Package.Management", "type": "Client Packages", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
         { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
@@ -88,29 +308,9 @@
         { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
   
         { "packageId": "xunit", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
+        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true }
 
         
         
 
-        { "packageId": "AsyncFixer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "codecracker.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "DisableDateTimeNow", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Discord.Net.Analyzers", "type": "Discord Analysers", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "FunFair.CodeAnalysis", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Meziantou.Analyzer", "type": "Code Analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Microsoft.CodeAnalysis.Analyzers", "type": "Code Analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Microsoft.CodeAnalysis.CSharp.Workspaces", "type": "Code Analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Microsoft.VisualStudio.Threading.Analyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Nullable.Extended.Analyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "NSubstitute.Analyzers.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Philips.CodeAnalysis.DuplicateCodeAnalyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Philips.CodeAnalysis.MaintainabilityAnalyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "Roslynator.Analyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "SecurityCodeScan.VS2019", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "SmartAnalyzers.CSharpExtensions.Annotations", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "SonarAnalyzer.CSharp", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "SourceLink.Create.CommandLine", "type": "Source Link", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "ToStringWithoutOverrideAnalyzer", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "xunit.analyzers", "type": "Code analysis", "exact-match": true, "version-bump-package": false, "prohibit-version-bump-when-referenced": true }
 ]

@@ -161,6 +161,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "BinaryToText",
+                "type": "Base 58 conversion",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Bogus",
                 "type": "Fake data generation",
                 "exact-match": true,

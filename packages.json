@@ -359,7 +359,7 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
-                "pacageId": "Microsoft.IO.RecyclableMemoryStream",
+                "packageId": "Microsoft.IO.RecyclableMemoryStream",
                 "type": "Memory stream",
                 "exact-match": false,
                 "version-bump-package": true,

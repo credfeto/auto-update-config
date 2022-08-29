@@ -541,6 +541,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "StronglyTypedId",
+                "type": "Strong typed ID generation",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Swashbuckle",
                 "type": "Swagger",
                 "exact-match": false,

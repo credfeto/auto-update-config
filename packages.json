@@ -338,6 +338,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "Microsoft.AspNetCore.SignalR.StackExchangeRedis",
+                "type": "Redis backplane for SignalR",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Microsoft.Extensions",
                 "type": "Microsoft Extensions",
                 "exact-match": false,

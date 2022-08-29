@@ -394,6 +394,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "Nito.AsyncEx.Coordination",
+                "type": "Async extensions",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "NonBlocking",
                 "type": "Non-blocking concurrent collections",
                 "exact-match": true,

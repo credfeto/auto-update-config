@@ -450,6 +450,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "QRCoder",
+                "type": "QR Code generation",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "ScottPlot",
                 "type": "Graphing",
                 "exact-match": true,

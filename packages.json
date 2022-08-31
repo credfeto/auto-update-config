@@ -252,6 +252,13 @@
                 "prohibit-version-bump-when-referenced": true
         },
         {
+                "packageId": "FluentValidation",
+                "type": "Validation",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "FluentValidation.AspNetCore",
                 "type": "Validation",
                 "exact-match": true,

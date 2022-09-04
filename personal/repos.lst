@@ -24,3 +24,4 @@ git@github.com:credfeto/action-no-ignored-files.git
 git@github.com:credfeto/action-repo-visibility.git
 git@github.com:credfeto/credfeto-config-backup.git
 git@github.com:credfeto/credfeto-extensions-configuration-typed-json.git
+git@github.com:credfeto/credfeto-database.git

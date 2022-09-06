@@ -548,6 +548,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "Serilog.Sinks.Console",
+                "type": "Serilog logging console output sink",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Serilog.Sinks.Debug",
                 "type": "Serilog logging debug output sink",
                 "exact-match": true,

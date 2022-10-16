@@ -604,6 +604,13 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
+                "packageId": "System.Data.SqlClient",
+                "type": "SQL Server database client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "System.IdentityModel.Tokens.Jwt",
                 "type": "Test Infrastructure",
                 "exact-match": true,

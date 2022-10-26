@@ -144,63 +144,72 @@
                 "type": "ASP.NET Core API Rate Limiting",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "AutoBogus.NSubstitute",
                 "type": "NSubstitute extensions for Bogus",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "AWSSDK",
                 "type": "AWS SDK",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "BinaryToText",
                 "type": "Base 58 conversion",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Bogus",
                 "type": "Fake data generation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "BenchmarkDotNet",
                 "type": "Benchmarkin",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Castle.Core",
                 "type": "Dependency Injection",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "CommandLineParser",
                 "type": "Command line parser",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "CountryData.Bogus",
                 "type": "Country data extension for Bogus",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "coverlet",
@@ -214,42 +223,48 @@
                 "type": "Crypto",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Credfeto.Database",
                 "type": "Database support",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Credfeto.Extensions.Configuration.Typed.Json",
                 "type": "Strongly typed and verified configuration",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Credfeto.ImageLoader",
                 "type": "Image Loader",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Dapper",
                 "type": "Database infrastructure",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Discord.Net",
                 "type": "Discord",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "dotnetstandard-bip39",
@@ -263,395 +278,636 @@
                 "type": "Validation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "FluentValidation.AspNetCore",
                 "type": "Validation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "FunFair.Authentication",
                 "type": "Authentication",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "FunFair.Balance.Bot.Client",
                 "type": "House account balance monitoring",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
-        { "packageId": "FunFair.Common", "type": "Common", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Content.Package.Management", "type": "Client Packages", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.Proxy.Client", "type": "Ethereum Proxy Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.Balance.Client", "type": "Ethereum Balance Client", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.Shared.Networks", "type": "Ethereum Networks", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.TokenTransfer.Client", "type": "Ethereum Token Transfer Client", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.Faucet", "type": "Ethereum Faucet", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.Payouts", "type": "Ethereum Payouts", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum.MultiCall", "type": "Ethereum Mult-Call optimizations", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Ethereum", "type": "Ethereum", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "FunFair.Random", "type": "Random Number support", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.RateLimit", "type": "ASP.NET Core API Rate Limiting", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.ServerMonitoring", "type": "Server monitoring", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Client", "type": "Client package", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Geo.Logic", "type": "Geo IP Rules", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Server.Ethereum.Accounts", "type": "Ethereum Server accounts", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.SinglePayout", "type": "Single Payment", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.SignalR", "type": "SignalR Helpers", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Swagger", "type": "Swagger", "exact-match": false, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "FunFair.Test.Common", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        
-        { "packageId": "HexMate", "type": "Hex to byte conversion", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-        { "packageId": "HtmlAgilityPack", "type": "HTML Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "IPAddressRange", "type": "IP Addresses", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-
-        { "packageId": "Jetbrains.Annotations", "type": "Resharper Code Annotations", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-
-        { "packageId": "LibGit2Sharp", "type": "Build Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
+        {
+                "packageId": "FunFair.Common",
+                "type": "Common",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Content.Package.Management",
+                "type": "Client Packages",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.Proxy.Client",
+                "type": "Ethereum Proxy Client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.Balance.Client",
+                "type": "Ethereum Balance Client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.Shared.Networks",
+                "type": "Ethereum Networks",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.TokenTransfer.Client",
+                "type": "Ethereum Token Transfer Client",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.Faucet",
+                "type": "Ethereum Faucet",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.Payouts",
+                "type": "Ethereum Payouts",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum.MultiCall",
+                "type": "Ethereum Mult-Call optimizations",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Ethereum",
+                "type": "Ethereum",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": [
+                        {
+                                "packageId": "FunFair.Ethereum.Shared.Networks",
+                                "exact-match": true
+                        }
+                ]
+        },
+        {
+                "packageId": "FunFair.Random",
+                "type": "Random Number support",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.RateLimit",
+                "type": "ASP.NET Core API Rate Limiting",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.ServerMonitoring",
+                "type": "Server monitoring",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Client",
+                "type": "Client package",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Geo.Logic",
+                "type": "Geo IP Rules",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Server.Ethereum.Accounts",
+                "type": "Ethereum Server accounts",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.SinglePayout",
+                "type": "Single Payment",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.SignalR",
+                "type": "SignalR Helpers",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Swagger",
+                "type": "Swagger",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.Test.Common",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        },
+        {
+                "packageId": "HexMate",
+                "type": "Hex to byte conversion",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "HtmlAgilityPack",
+                "type": "HTML Parser",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "IPAddressRange",
+                "type": "IP Addresses",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "Jetbrains.Annotations",
+                "type": "Resharper Code Annotations",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        },
+        {
+                "packageId": "LibGit2Sharp",
+                "type": "Build Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
         {
                 "packageId": "LibSassHost",
                 "type": "SASS Compiler",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Magick.NET-Q16-AnyCPU",
                 "type": "Image processing",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "MaxMind.GeoIP2",
                 "type": "IP: Country Lookup",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "MaxMind.MinFraud",
                 "type": "IP: Fraud detection",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "MediatR",
                 "type": "Simple, unambitious mediator",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.ApplicationInsights.AspNetCore",
                 "type": "Microsoft Application Insights",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.AspNetCore.SignalR.StackExchangeRedis",
                 "type": "Redis backplane for SignalR",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.Extensions",
                 "type": "Microsoft Extensions",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.IO.RecyclableMemoryStream",
                 "type": "Memory stream",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.NET.Test.Sdk",
                 "type": "Test Infrastructure",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Microsoft.VisualStudio.Threading",
                 "type": "Threading helpers",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "MSBuild.Sdk.SqlProj",
                 "type": "DacPac / SQL generation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
         },
         {
                 "packageId": "NBitcoin",
                 "type": "BitCoin/BIP39 key handling",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
         },
         {
                 "packageId": "Newtonsoft.Json",
                 "type": "JSON Converter",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Nito.AsyncEx.Coordination",
                 "type": "Async extensions",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "NonBlocking",
                 "type": "Non-blocking concurrent collections",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Npgsql",
                 "type": "PostgreSQL Data provider",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "NSubstitute",
                 "type": "Test Infrastructure",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
         },
         {
                 "packageId": "NuGet",
                 "type": "Versioning policy",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Octopus.Client",
                 "type": "Octopus",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Polly",
                 "type": "Policy based retrying",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Portable.BouncyCastle",
                 "type": "Crypto",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "QRCoder",
                 "type": "QR Code generation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "ScottPlot",
                 "type": "Graphing",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Secp256k1.Native",
                 "type": "Bitcoin/Ethereum crypto",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Sendgrid",
                 "type": "Email service",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.AssemblyName",
                 "type": "Serilog assembly name enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.Demystifier",
                 "type": "Serilog exception demystifier enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.Environment",
                 "type": "Serilog environment enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.Process",
                 "type": "Serilog process enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.Sensitive",
                 "type": "Serilog sensitive text enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Enrichers.Thread",
                 "type": "Serilog thread enricher",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Extensions.Logging",
                 "type": "Serilog extension for Microsoft logging",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Sinks.Console",
                 "type": "Serilog logging console output sink",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Sinks.Debug",
                 "type": "Serilog logging debug output sink",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Sinks.Loggly",
                 "type": "Serilog logging loggly sink",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog.Sinks.Xunit",
                 "type": "Serilog logging xunit sink",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Serilog",
                 "type": "Serilog logging",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "SixLabors.ImageSharp",
                 "type": "Image Processing",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "StronglyTypedId",
                 "type": "Strong typed ID generation",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "Swashbuckle",
                 "type": "Swagger",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "System.Data.SqlClient",
                 "type": "SQL Server database client",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "System.IdentityModel.Tokens.Jwt",
                 "type": "Test Infrastructure",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "System.Interactive.Async",
                 "type": "Reactive extensions/Observable",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "System.Reactive",
                 "type": "Reactive extensions/Observable",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
         {
                 "packageId": "TeamCity.VSTest.TestAdapter",
                 "type": "Test Infrastructure",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
         },
         {
                 "packageId": "TwitchLib",
                 "type": "Twitch API",
                 "exact-match": false,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
         },
-        
-        { "packageId": "UAParser", "type": "User Agent Parser", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": false },
-  
-        { "packageId": "xunit", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true },
-        { "packageId": "xunit.runner.visualstudio", "type": "Test Infrastructure", "exact-match": true, "version-bump-package": true, "prohibit-version-bump-when-referenced": true }
-
-        
-        
-
+        {
+                "packageId": "UAParser",
+                "type": "User Agent Parser",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "xunit",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        },
+        {
+                "packageId": "xunit.runner.visualstudio",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        }
 ]

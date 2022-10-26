@@ -338,6 +338,14 @@
                 "exclude": []
         },
         {
+                "packageId": "FunFair.Ethereum.Gas.Client",
+                "type": "Ethereum Gas Client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "FunFair.Ethereum.Shared.Networks",
                 "type": "Ethereum Networks",
                 "exact-match": true,
@@ -348,7 +356,7 @@
         {
                 "packageId": "FunFair.Ethereum.TokenTransfer.Client",
                 "type": "Ethereum Token Transfer Client",
-                "exact-match": false,
+                "exact-match": true,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []
@@ -371,7 +379,7 @@
         },
         {
                 "packageId": "FunFair.Ethereum.MultiCall",
-                "type": "Ethereum Mult-Call optimizations",
+                "type": "Ethereum Multi-Call optimizations",
                 "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
@@ -386,6 +394,34 @@
                 "exclude": [
                         {
                                 "packageId": "FunFair.Ethereum.Shared.Networks",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Proxy.Client",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Balance.Client",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Gas.Client",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.TokenTransfer.Client",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Faucet",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Payouts",
+                                "exact-match": true
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.MultiCall",
                                 "exact-match": true
                         }
                 ]

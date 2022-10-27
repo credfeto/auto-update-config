@@ -635,6 +635,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Microsoft.Toolkit.HighPerformance",
+                "type": "High performance toolkit",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "MSBuild.Sdk.SqlProj",
                 "type": "DacPac / SQL generation",
                 "exact-match": true,
@@ -693,6 +701,14 @@
         {
                 "packageId": "NuGet",
                 "type": "Versioning policy",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "NWebsec.AspNetCore.Middleware",
+                "type": "NWebSec middleware",
                 "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,

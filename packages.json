@@ -422,7 +422,7 @@
                         },
                         {
                                 "packageId": "FunFair.Ethereum.MultiCall",
-                                "exact-match": true
+                                "exact-match": false
                         }
                 ]
         },

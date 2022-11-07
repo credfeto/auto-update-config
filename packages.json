@@ -16,7 +16,7 @@
         {
                 "packageId": "Credfeto.Enumeration.Source.Generation",
                 "type": "Code analysis",
-                "exact-match": true,
+                "exact-match": false,
                 "version-bump-package": false,
                 "prohibit-version-bump-when-referenced": false
         },

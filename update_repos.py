@@ -374,10 +374,13 @@ def update():
             if repo == 'git@github.com:credfeto/auto-update-config.git':
                 continue
 
+            if repo == 'git@github.com:credfeto/credfeto.git':
+                continue
+
             new_settings = base_main_branch_protection_settings()
             print(new_settings)
 
-            existing_settings = get_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'master')
+            existing_settings = get_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main')
             print(existing_settings)
 
             if existing_settings:
@@ -386,9 +389,9 @@ def update():
                 print("**** CHECK UPDATE")
                 changed = have_branch_protection_settings_changed(existing_settings, new_settings)
                 if changed:
-                    set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'master', new_settings)
+                    set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main', new_settings)
             else:
-                set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'master', new_settings)
+                set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main', new_settings)
 
         # ABORT AT FIRST ONE FOR NOW
         # break

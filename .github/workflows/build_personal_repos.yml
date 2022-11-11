@@ -3,7 +3,7 @@ name: Build Personal Repos
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - build_personal.py
       - requirements.txt

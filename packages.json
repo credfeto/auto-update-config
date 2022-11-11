@@ -802,6 +802,14 @@
                 "exclude": []
         },
         {
+                "packageId": "SSerilog.Exceptions",
+                "type": "Serilog exceptions enricher",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Serilog.Enrichers.Process",
                 "type": "Serilog process enricher",
                 "exact-match": true,

@@ -3,7 +3,7 @@ name: Update Repo Settings
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - personal/repos.lst
       - update_repos.py

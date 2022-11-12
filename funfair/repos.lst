@@ -18,7 +18,6 @@ git@github.com:funfair-tech/funfair-server-multi-call.git
 git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
-git@github.com:funfair-tech/funfair-server-wallet-jwt-authentication.git
 git@github.com:funfair-tech/funfair-server-client-package.git
 git@github.com:funfair-tech/funfair-server-client-package-wallet-rewriter.git
 git@github.com:funfair-tech/funfair-server-signalr-hub.git
@@ -30,7 +29,6 @@ git@github.com:funfair-tech/funfair-server-ethereum-accounts.git
 git@github.com:funfair-tech/funfair-server-faucet.git
 git@github.com:funfair-tech/funfair-server-single-payout.git
 git@github.com:funfair-tech/funfair-server-multi-payout.git
-git@github.com:funfair-tech/funfair-wallet-server.git
 git@github.com:funfair-tech/funfair-server-balance-bot.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server-monitor.git

@@ -19,7 +19,6 @@ git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
 git@github.com:funfair-tech/funfair-server-client-package.git
-git@github.com:funfair-tech/funfair-server-client-package-wallet-rewriter.git
 git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server.git
 git@github.com:funfair-tech/funfair-ethereum-balance-server.git

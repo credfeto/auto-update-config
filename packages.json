@@ -802,7 +802,7 @@
                 "exclude": []
         },
         {
-                "packageId": "SSerilog.Exceptions",
+                "packageId": "Serilog.Exceptions",
                 "type": "Serilog exceptions enricher",
                 "exact-match": true,
                 "version-bump-package": true,

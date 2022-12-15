@@ -914,6 +914,14 @@
                 "exclude": []
         },
         {
+                "packageId": "System.IO",
+                "type": "IO",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "System.IdentityModel.Tokens.Jwt",
                 "type": "Test Infrastructure",
                 "exact-match": true,
@@ -933,6 +941,22 @@
                 "packageId": "System.Reactive",
                 "type": "Reactive extensions/Observable",
                 "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "System.Runtime",
+                "type": "Runtime",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "System.Text",
+                "type": "Text",
+                "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []

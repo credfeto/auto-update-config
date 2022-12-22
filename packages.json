@@ -258,8 +258,24 @@
                 "exclude": []
         },
         {
+                "packageId": "Credfeto.Extensions.Linq",
+                "type": "Linq extensions",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Credfeto.ImageLoader",
                 "type": "Image Loader",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "Credfeto.Random",
+                "type": "Random data support",
                 "exact-match": true,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,

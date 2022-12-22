@@ -242,6 +242,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Credfeto.Date",
+                "type": "Date/Time extensions",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Credfeto.Extensions.Configuration.Typed.Json",
                 "type": "Strongly typed and verified configuration",
                 "exact-match": true,

@@ -586,6 +586,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Mediator",
+                "type": "Simple, unambitious mediator (Source generated)",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "MediatR",
                 "type": "Simple, unambitious mediator",
                 "exact-match": false,

@@ -188,10 +188,10 @@
         },
         {
                 "packageId": "BenchmarkDotNet",
-                "type": "Benchmarkin",
+                "type": "Benchmarking",
                 "exact-match": true,
                 "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false,
+                "prohibit-version-bump-when-referenced": true,
                 "exclude": []
         },
         {

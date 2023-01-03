@@ -986,6 +986,14 @@
                 "exclude": []
         },
         {
+                "packageId": "System.Threading.Tasks",
+                "type": "Async Tasks",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "System.Text",
                 "type": "Text",
                 "exact-match": false,

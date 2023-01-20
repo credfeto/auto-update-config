@@ -282,6 +282,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Credfeto.Services.Startup",
+                "type": "Run on startup services",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Dapper",
                 "type": "Database infrastructure",
                 "exact-match": true,

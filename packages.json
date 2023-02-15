@@ -626,6 +626,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Meziantou.Xunit.ParallelTestFramework",
+                "type": "Parallel test execution",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Microsoft.ApplicationInsights.AspNetCore",
                 "type": "Microsoft Application Insights",
                 "exact-match": true,

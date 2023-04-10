@@ -16,7 +16,6 @@ git@github.com:credfeto/action-yaml-format.git
 git@github.com:credfeto/nuget-multi-push.git
 git@github.com:credfeto/changelog-manager.git
 git@github.com:credfeto/credfeto-notes.git
-git@github.com:credfeto/diffractor-sample.git
 git@github.com:credfeto/action-no-ignored-files.git
 git@github.com:credfeto/action-repo-visibility.git
 git@github.com:credfeto/credfeto-config-backup.git

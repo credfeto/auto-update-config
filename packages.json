@@ -202,6 +202,14 @@
                 "exclude": []
         },
         {
+                "packageId": "BenchmarkDotNet.Diagnostics.dotTrace",
+                "type": "Benchmarking dotTrace runner",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        },
+        {
                 "packageId": "Castle.Core",
                 "type": "Dependency Injection",
                 "exact-match": true,

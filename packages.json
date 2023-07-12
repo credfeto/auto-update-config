@@ -328,6 +328,13 @@
                 "prohibit-version-bump-when-referenced": true
         },
         {
+                "packageId": "Evo.Keccak",
+                "type": "Keccak",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
                 "packageId": "FluentValidation",
                 "type": "Validation",
                 "exact-match": false,
@@ -583,6 +590,13 @@
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": true,
                 "exclude": []
+        },
+        {
+                "packageId": "Keccak256",
+                "type": "Keccak",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
         },
         {
                 "packageId": "LibGit2Sharp",
@@ -935,6 +949,13 @@
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []
+        },
+        {
+                "packageId": "SHA3",
+                "type": "Keccak",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
         },
         {
                 "packageId": "SixLabors.ImageSharp",

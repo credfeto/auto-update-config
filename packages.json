@@ -140,6 +140,13 @@
                 "prohibit-version-bump-when-referenced": true
         },
         {
+                "packageId": "ThisAssembly.AssemblyInfo",
+                "type": "Compiled assembly info as constants",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true
+        },        
+        {
                 "packageId": "ToStringWithoutOverrideAnalyzer",
                 "type": "Code analysis",
                 "exact-match": true,

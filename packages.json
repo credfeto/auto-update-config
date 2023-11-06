@@ -686,6 +686,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Microsoft.Data.SqlClient",
+                "type": "SQL Server database client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Microsoft.Extensions",
                 "type": "Microsoft Extensions",
                 "exact-match": false,

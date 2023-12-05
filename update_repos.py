@@ -342,11 +342,7 @@ def update_repo_settings(owner, name):
         "allow_update_branch": True,
         "archive-program-opt-out-feature": True,
         "merge_commit_title": "PR_TITLE",
-        "merge_commit_message": "PR_BODY",
-        "security_and_analysis": {
-           "advanced_security": {
-               "status": "enabled"
-           }
+        "merge_commit_message": "PR_BODY"
        }
     }
 

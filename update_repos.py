@@ -343,7 +343,6 @@ def update_repo_settings(owner, name):
         "archive-program-opt-out-feature": True,
         "merge_commit_title": "PR_TITLE",
         "merge_commit_message": "PR_BODY"
-       }
     }
 
     patch_github("/repos/" + owner + "/" + name, repo_settings)

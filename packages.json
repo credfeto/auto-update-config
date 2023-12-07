@@ -662,6 +662,13 @@
                 "exclude": []
         },
         {
+                "packageId": "Meziantou.Framework.InlineSnapshotTesting",
+                "type": "Snapshot testing",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Meziantou.Xunit.ParallelTestFramework",
                 "type": "Parallel test execution",
                 "exact-match": true,

@@ -256,6 +256,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Credfeto.ChangeLog",
+                "type": "Changelog parsing and maintenance",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Credfeto.Database",
                 "type": "Database support",
                 "exact-match": false,
@@ -291,6 +299,14 @@
                 "packageId": "Credfeto.ImageLoader",
                 "type": "Image Loader",
                 "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "Credfeto.Package",
+                "type": "DotNet package updates",
+                "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []
@@ -361,6 +377,22 @@
                 "packageId": "FunFair.Balance.Bot.Client",
                 "type": "House account balance monitoring",
                 "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.BuildCheck",
+                "type": "DotNet build checker",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
+                "packageId": "FunFair.BuildVersion",
+                "type": "DotNet build versioning",
+                "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []

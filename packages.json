@@ -225,6 +225,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Cocona",
+                "type": "Command line parser",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "CommandLineParser",
                 "type": "Command line parser",
                 "exact-match": true,

@@ -158,7 +158,26 @@
                 "type": "Code analysis",
                 "exact-match": true,
                 "version-bump-package": false,
-                "prohibit-version-bump-when-referenced": true
+                "prohibit-version-bump-when-referenced": true,
+                "notes": "xunit.analyzers needs to be before xunit"
+        },
+        {
+                "packageId": "xunit.runner.visualstudio",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": [],
+                "notes": "xunit.runner.visualstudio needs to be before xunit"
+        },
+        {
+                "packageId": "xunit",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": [],
+                "notes": "xunit needs to be before FunFair.Test.Common"
         },
         {
                 "packageId": "AspNetCoreRateLimit",
@@ -1131,20 +1150,4 @@
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []
         },
-        {
-                "packageId": "xunit",
-                "type": "Test Infrastructure",
-                "exact-match": true,
-                "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true,
-                "exclude": []
-        },
-        {
-                "packageId": "xunit.runner.visualstudio",
-                "type": "Test Infrastructure",
-                "exact-match": true,
-                "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": true,
-                "exclude": []
-        }
 ]

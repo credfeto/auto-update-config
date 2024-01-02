@@ -1149,5 +1149,5 @@
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,
                 "exclude": []
-        },
+        }
 ]

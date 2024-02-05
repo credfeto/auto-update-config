@@ -721,6 +721,13 @@
                 "exclude": []
         },
         {
+                "packageId": "Meziantou.Extensions.Logging.Xunit",
+                "type": "Testing logging helper",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Meziantou.Framework.InlineSnapshotTesting",
                 "type": "Snapshot testing",
                 "exact-match": true,

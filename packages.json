@@ -887,6 +887,14 @@
                 "exclude": []
         },
         {
+                "packageId": "OxyPlot",
+                "type": "Graphing",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Polly",
                 "type": "Policy based retrying",
                 "exact-match": true,

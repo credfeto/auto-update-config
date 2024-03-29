@@ -830,6 +830,13 @@
                 "exclude": []
         },
         {
+                "packageId": "Nethereum",
+                "type": "Ethereum Apis",
+                "exact-match": false,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
                 "packageId": "Newtonsoft.Json",
                 "type": "JSON Converter",
                 "exact-match": true,

@@ -19,7 +19,6 @@ git@github.com:credfeto/action-no-ignored-files.git
 git@github.com:credfeto/action-repo-visibility.git
 git@github.com:credfeto/credfeto-config-backup.git
 git@github.com:credfeto/credfeto-extensions-configuration-typed-json.git
-git@github.com:credfeto/credfeto-database-dapper.git
 git@github.com:credfeto/credfeto-enum-source-generation.git
 git@github.com:credfeto/credfeto-date.git
 git@github.com:credfeto/credfeto-extensions-linq.git

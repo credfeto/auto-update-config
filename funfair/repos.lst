@@ -10,7 +10,6 @@ git@github.com:funfair-tech/funfair-build-version.git
 git@github.com:funfair-tech/funfair-server-swagger.git
 git@github.com:funfair-tech/funfair-server-common.git
 git@github.com:funfair-tech/funfair-server-random.git
-git@github.com:funfair-tech/funfair-server-counter-monitoring.git
 git@github.com:funfair-tech/funfair-server-ethereum.git
 git@github.com:funfair-tech/funfair-server-ethereum-networks.git
 git@github.com:funfair-tech/funfair-server-content-package.git

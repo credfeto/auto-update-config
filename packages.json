@@ -22,7 +22,14 @@
         },
         {
                 "packageId": "Credfeto.Enumeration",
-                "type": "Code analysis",
+                "type": "Code generator",
+                "exact-match": false,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": false
+        },
+        {
+                "packageId": "Credfeto.Version",
+                "type": "Code generator",
                 "exact-match": false,
                 "version-bump-package": false,
                 "prohibit-version-bump-when-referenced": false

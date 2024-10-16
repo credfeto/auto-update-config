@@ -32,3 +32,4 @@ git@github.com:credfeto/linux-setup.git
 git@github.com:credfeto/credfeto-flatpak-filter.git
 git@github.com:credfeto/package-logs.git
 git@github.com:credfeto/credfeto-systemd.git
+git@github.com:credfeto/credfeto-versioninfo.git

@@ -28,9 +28,9 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
-                "packageId": "Credfeto.Version",
+                "packageId": "Credfeto.Version.Information.Generator",
                 "type": "Code generator",
-                "exact-match": false,
+                "exact-match": true,
                 "version-bump-package": false,
                 "prohibit-version-bump-when-referenced": false
         },

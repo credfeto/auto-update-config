@@ -24,7 +24,6 @@ git@github.com:credfeto/credfeto-enum-source-generation.git
 git@github.com:credfeto/credfeto-date.git
 git@github.com:credfeto/credfeto-extensions-linq.git
 git@github.com:credfeto/credfeto-random.git
-git@github.com:credfeto/credfeto-checker.git
 git@github.com:credfeto/credfeto-services-startup.git
 git@github.com:credfeto/credfeto-database-source-generator.git
 git@github.com:credfeto/credfeto-dotnet-repo-tools.git
@@ -33,3 +32,4 @@ git@github.com:credfeto/credfeto-flatpak-filter.git
 git@github.com:credfeto/package-logs.git
 git@github.com:credfeto/credfeto-systemd.git
 git@github.com:credfeto/credfeto-version-constants-generator.git
+git@github.com:credfeto/credfeto-jellyfin.git

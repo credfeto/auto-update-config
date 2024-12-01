@@ -34,3 +34,4 @@ git@github.com:credfeto/credfeto-systemd.git
 git@github.com:credfeto/credfeto-version-constants-generator.git
 git@github.com:credfeto/credfeto-jellyfin.git
 git@github.com:credfeto/credfeto-podfox.git
+git@github.com:credfeto/credfeto-dev-package-cache.git

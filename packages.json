@@ -84,6 +84,13 @@
                 "prohibit-version-bump-when-referenced": true
         },
         {
+                "packageId": "Microsoft.Sbom.Targets,
+                "type": "Software Bill Of Materials",
+                "exact-match": false,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
+        {
                 "packageId": "Microsoft.VisualStudio.Threading.Analyzers",
                 "type": "Code analysis",
                 "exact-match": true,

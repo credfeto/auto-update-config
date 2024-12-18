@@ -36,3 +36,4 @@ git@github.com:credfeto/credfeto-jellyfin.git
 git@github.com:credfeto/credfeto-podfox.git
 git@github.com:credfeto/credfeto-dev-package-cache.git
 git@github.com:credfeto/credfeto-docker-registry.git
+git@github.com:credfeto/credfeto-notification-bot-docker.git

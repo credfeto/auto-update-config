@@ -7,7 +7,6 @@ git@github.com:funfair-tech/funfair-server-code-analysis.git
 git@github.com:funfair-tech/funfair-server-test.git
 git@github.com:funfair-tech/funfair-build-check.git
 git@github.com:funfair-tech/funfair-build-version.git
-git@github.com:funfair-tech/funfair-server-swagger.git
 git@github.com:funfair-tech/funfair-server-common.git
 git@github.com:funfair-tech/funfair-server-random.git
 git@github.com:funfair-tech/funfair-server-ethereum.git

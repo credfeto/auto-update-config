@@ -37,3 +37,4 @@ git@github.com:credfeto/credfeto-dev-package-cache.git
 git@github.com:credfeto/credfeto-docker-registry.git
 git@github.com:credfeto/credfeto-notification-bot-docker.git
 git@github.com:credfeto/credfeto-nuget-proxy.git
+git@github.com:credfeto/credfeto-adguard-home.git

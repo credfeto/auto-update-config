@@ -335,6 +335,14 @@
                 "exclude": []
         },
         {
+                "packageId": "Credfeto.Docker.HealthCheck.Http.Client",
+                "type": "Docker healthcheck http client",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "Credfeto.Extensions.Configuration.Typed.Json",
                 "type": "Strongly typed and verified configuration",
                 "exact-match": true,

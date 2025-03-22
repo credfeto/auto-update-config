@@ -208,6 +208,15 @@
                 "notes": "xunit needs to be before FunFair.Test.Common"
         },
         {
+                "packageId": "xunit.v3",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": [],
+                "notes": "xunit v3 needs to be before FunFair.Test.Common"
+        },
+        {
                 "packageId": "AspNetCoreRateLimit",
                 "type": "ASP.NET Core API Rate Limiting",
                 "exact-match": true,

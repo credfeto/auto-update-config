@@ -768,7 +768,7 @@
         {
                 "packageId": "Meziantou.Extensions.Logging.Xunit",
                 "type": "Testing logging helper",
-                "exact-match": true,
+                "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false
         },

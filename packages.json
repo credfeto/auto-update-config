@@ -210,7 +210,7 @@
         {
                 "packageId": "xunit.v3",
                 "type": "Test Infrastructure",
-                "exact-match": true,
+                "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": true,
                 "exclude": [],

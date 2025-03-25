@@ -90,6 +90,13 @@
                 "version-bump-package": false,
                 "prohibit-version-bump-when-referenced": true
         },
+        {          
+                "packageId": "Microsoft.Testing.Extensions.CodeCoverage",
+                "type": "Code Coverage",
+                "exact-match": true,
+                "version-bump-package": false,
+                "prohibit-version-bump-when-referenced": true
+        },
         {
                 "packageId": "Microsoft.Sbom.Targets",
                 "type": "Software Bill Of Materials",

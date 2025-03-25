@@ -1,4 +1,4 @@
-name: Update Repo Settings
+name: "Update: Repo Settings"
 
 on:
   push:

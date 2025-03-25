@@ -28,10 +28,10 @@ jobs:
       - name: "Build"
         run: |
           mkdir ./public
-          cp packages.json ./public/packages.json
+          cp packages.json ./public/packages.config
           cp release.config ./public/release.config
-          cp personal/repos.txt ./personal-repos.txt
-          cp funfair/repos.txt ./funfair-repos.txt
+          cp personal/repos.lst ./personal-repos.config
+          cp funfair/repos.lst ./funfair-repos.config
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3

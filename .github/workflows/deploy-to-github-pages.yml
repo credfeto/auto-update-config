@@ -17,14 +17,15 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: "Checkout Source"
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Remove gitignore
+      - name: "Remove gitignore"
         run: rm -f ./public/.gitignore
 
-      - name: Build
+      - name: "Build"
         run: |
           mkdir ./public
           cp packages.json ./public/packages.json
@@ -32,8 +33,7 @@ jobs:
           cp personal/repos.txt ./personal-repos.txt
           cp funfair/repos.txt ./funfair-repos.txt
 
-
-      - name: Deploy
+      - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:

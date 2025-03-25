@@ -16,23 +16,19 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo
+    - name: "Check out repo"
       uses: actions/checkout@v4.1.0
-    - name: Set up Python
+
+    - name: "Set up Python"
       uses: actions/setup-python@v5.0.0
       with:
         python-version: 3.x
-    - uses: actions/cache@v4.0.0
-      name: Configure pip caching
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-    - name: Install Python dependencies
+
+    - name: "Install Python dependencies"
       run: |
         python -m pip install -r requirements.txt
-    - name: Update Repos
+
+    - name: "Update Repos"
       env:
         SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
       run: |-

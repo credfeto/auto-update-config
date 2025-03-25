@@ -12,6 +12,9 @@ on:
   schedule:
     - cron:  '32 * * * *'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -1,0 +1,42 @@
+name: "Build and deploy to github pages"
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+    paths:
+      - packages.json
+      - release.config
+      - personal/repos.lst
+      - funfair/repos.lst
+      - .github/workflows/deploy-to-github-pages.yml
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove gitignore
+        run: rm -f ./public/.gitignore
+
+      - name: Build
+        run: |
+          mkdir ./public
+          cp packages.json ./public/packages.json
+          cp release.config ./public/release.config
+          cp personal/repos.txt ./personal-repos.txt
+          cp funfair/repos.txt ./funfair-repos.txt
+
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: updates.markridgwell.com

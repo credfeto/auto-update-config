@@ -1,4 +1,4 @@
-name: Build Personal Repos
+name: "Build: Personal Repos"
 
 on:
   push:

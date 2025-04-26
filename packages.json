@@ -35,9 +35,9 @@
                 "prohibit-version-bump-when-referenced": false
         },
         {
-                "packageId": "CSharpier.MSBuild",
+                "packageId": "CSharpier",
                 "type": "C# Code reformatting",
-                "exact-match": true,
+                "exact-match": false,
                 "version-bump-package": false,
                 "prohibit-version-bump-when-referenced": false
         },

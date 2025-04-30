@@ -594,6 +594,22 @@
                         {
                                 "packageId": "FunFair.Ethereum.MultiCall",
                                 "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.GasPrices",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Tokens",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Events",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Transactions",
+                                "exact-match": false
                         }
                 ]
         },

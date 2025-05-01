@@ -12,6 +12,8 @@ git@github.com:funfair-tech/funfair-server-ethereum.git
 git@github.com:funfair-tech/funfair-server-ethereum-networks.git
 git@github.com:funfair-tech/funfair-server-ethereum-gas-prices.git
 git@github.com:funfair-tech/funfair-server-ethereum-contracts.git
+git@github.com:funfair-tech/funfair-server-ethereum-erc20-contracts.git
+git@github.com:funfair-tech/funfair-server-ethereum-erc721-contracts.git
 git@github.com:funfair-tech/funfair-server-ethereum-abi.git
 git@github.com:funfair-tech/funfair-server-ethereum-calls.git
 git@github.com:funfair-tech/funfair-server-ethereum-balances.git

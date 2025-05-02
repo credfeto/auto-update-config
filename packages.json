@@ -592,7 +592,15 @@
                                 "exact-match": true
                         },
                         {
-                                "packageId": "FunFair.Ethereum.MultiCall",
+                                "packageId": "FunFair.Ethereum.Abi",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Calls",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Contracts",
                                 "exact-match": false
                         },
                         {
@@ -609,6 +617,10 @@
                         },
                         {
                                 "packageId": "FunFair.Ethereum.Transactions",
+                                "exact-match": false
+                        },
+                        {
+                                "packageId": "FunFair.Ethereum.Wallet",
                                 "exact-match": false
                         }
                 ]

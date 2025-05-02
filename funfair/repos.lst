@@ -15,6 +15,7 @@ git@github.com:funfair-tech/funfair-server-ethereum-contracts.git
 git@github.com:funfair-tech/funfair-server-ethereum-abi.git
 git@github.com:funfair-tech/funfair-server-ethereum-erc20-contracts.git
 git@github.com:funfair-tech/funfair-server-ethereum-erc721-contracts.git
+git@github.com:funfair-tech/funfair-server-ethereum-multi-call-contracts.git
 git@github.com:funfair-tech/funfair-server-ethereum-wallet.git
 git@github.com:funfair-tech/funfair-server-ethereum-calls.git
 git@github.com:funfair-tech/funfair-server-ethereum-balances.git
@@ -25,7 +26,6 @@ git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
 git@github.com:funfair-tech/funfair-server-client-package.git
-git@github.com:funfair-tech/funfair-server-multi-call.git
 git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git

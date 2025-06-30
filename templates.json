@@ -1,34 +1,38 @@
 {
   "general": {
-    ".editorconfig": "Config",
-    ".csharpierrc": "Config",
-    ".csharpierrc.json": "Config",
-    ".csharpierrc.yaml": "Config",
-    ".gitleaks.toml": "Config",
-    ".gitignore": "Config",
-    ".gitattributes": "Config",
-    ".tsqllintrc": "Linters",
-    "CONTRIBUTING.md": "Documentation",
-    "SECURITY.md": "Documentation",
-    ".github/pr-lint.yml": "Linters",
-    ".github/CODEOWNERS": "Config",
-    ".github/PULL_REQUEST_TEMPLATE.md": "Config",
-    ".github/FUNDING.yml": "Config"
+    "files": {
+      ".editorconfig": "Config",
+      ".csharpierrc": "Config",
+      ".csharpierrc.json": "Config",
+      ".csharpierrc.yaml": "Config",
+      ".gitleaks.toml": "Config",
+      ".gitignore": "Config",
+      ".gitattributes": "Config",
+      ".tsqllintrc": "Linters",
+      "CONTRIBUTING.md": "Documentation",
+      "SECURITY.md": "Documentation",
+      ".github/pr-lint.yml": "Linters",
+      ".github/CODEOWNERS": "Config",
+      ".github/FUNDING.yml": "Config"
+    }
   },
-  "dependabot": {
-    "rebuild": true
-  },
-  "dotnet": {
-    "global-json": "update"
-  },
-  "labels": {
-    "rebuild": true
+  "dotNet": {
+    "global-json": true,
+    "resharper-dotsettings": true,
+    "files": {}
   },
   "github": {
-    "linters": true,
-    "actions": true,
+    "dependabot": {
+      "generate": true
+    },
+    "labels": {
+      "generate": true
+    },
     "issue-templates": true,
-    "pr-template": true
+    "pr-template": true,
+    "actions": true,
+    "linters": true,
+    "files": {}
   },
   "remove": {
     ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",

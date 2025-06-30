@@ -1,25 +1,27 @@
 {
   "general": {
     "files": {
-      ".editorconfig": "Config",
-      ".csharpierrc": "Config",
-      ".csharpierrc.json": "Config",
-      ".csharpierrc.yaml": "Config",
-      ".gitleaks.toml": "Config",
-      ".gitignore": "Config",
-      ".gitattributes": "Config",
-      ".tsqllintrc": "Linters",
+      ".editorconfig": "Editor Config",
+      ".csharpierrc": "CSharpier Config",
+      ".csharpierrc.json": "CSharpier Config",
+      ".csharpierrc.yaml": "CSharpier Config",
+      ".gitleaks.toml": "Gitleaks Config",
+      ".gitignore": "Gitignore config",
+      ".gitattributes": "git file attributes config",
+      ".tsqllintrc": "SQL Lint Config",
       "CONTRIBUTING.md": "Documentation",
-      "SECURITY.md": "Documentation",
-      ".github/pr-lint.yml": "Linters",
-      ".github/CODEOWNERS": "Config",
-      ".github/FUNDING.yml": "Config"
+      "SECURITY.md": "Documentation"
     }
   },
   "dotNet": {
     "global-json": true,
     "resharper-dotsettings": true,
-    "files": {}
+    "files": {
+      "CodeAnalysis.ruleset": "Code analysis",
+      "Directory.Build.props": "C# Directory Build Properties",
+      "FunFair.props": "Build Props",
+      "packageicon.png": "Package Icon"
+    }
   },
   "github": {
     "dependabot": {
@@ -32,7 +34,11 @@
     "pr-template": true,
     "actions": true,
     "linters": true,
-    "files": {}
+    "files": {
+      "pr-lint.yml": "Linters",
+      "CODEOWNERS": "Code owners",
+      "FUNDING.yml": "Funding config"
+    }
   },
   "remove": {
     ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",

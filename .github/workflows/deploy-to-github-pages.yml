@@ -6,9 +6,11 @@ on:
       - main  # Set a branch to deploy
     paths:
       - packages.json
-      - release.config
+      - release.json
       - personal/repos.lst
       - funfair/repos.lst
+      - personal/templates.json
+      - funfair/templates.json
       - .github/workflows/deploy-to-github-pages.yml
 jobs:
   deploy:
@@ -32,9 +34,12 @@ jobs:
         run: |
           mkdir "${{env.TARGET}}/"
           cp packages.json "${{env.TARGET}}/packages.config"
-          cp release.config "${{env.TARGET}}/release.config"
+          cp release.json "${{env.TARGET}}/personal-release.config"
+          cp release.json "${{env.TARGET}}/personal-release.config"
           cp personal/repos.lst "${{env.TARGET}}/personal-repos.config"
           cp funfair/repos.lst "${{env.TARGET}}/funfair-repos.config"
+          cp personal/templates.json "${{env.TARGET}}/personal-templates.config"
+          cp funfair/templates.json "${{env.TARGET}}/funfair-templates.config"
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@v3

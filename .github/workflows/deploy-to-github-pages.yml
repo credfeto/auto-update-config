@@ -35,7 +35,7 @@ jobs:
           mkdir "${{env.TARGET}}/"
           cp packages.json "${{env.TARGET}}/packages.config"
           cp release.json "${{env.TARGET}}/personal-release.config"
-          cp release.json "${{env.TARGET}}/personal-release.config"
+          cp release.json "${{env.TARGET}}/funfair-release.config"
           cp personal/repos.lst "${{env.TARGET}}/personal-repos.config"
           cp funfair/repos.lst "${{env.TARGET}}/funfair-repos.config"
           cp personal/templates.json "${{env.TARGET}}/personal-templates.config"

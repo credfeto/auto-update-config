@@ -23,7 +23,7 @@
       "packageicon.png": "Package Icon"
     }
   },
-  "github": {
+  "gitHub": {
     "dependabot": {
       "generate": true
     },
@@ -40,8 +40,10 @@
       "FUNDING.yml": "Funding config"
     }
   },
-  "remove": {
-    ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",
-    ".github/actions/nuget-push-separate-symbol-feed/actions.yml": "Obsolete action"
+  "cleanup": {
+    "files": {
+      ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",
+      ".github/actions/nuget-push-separate-symbol-feed/actions.yml": "Obsolete action"
+    }
   }
 }

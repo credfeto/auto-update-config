@@ -9,6 +9,7 @@ git@github.com:funfair-tech/funfair-build-version.git
 git@github.com:funfair-tech/funfair-server-common.git
 git@github.com:funfair-tech/funfair-server-keccak.git
 git@github.com:funfair-tech/funfair-server-random.git
+git@github.com:funfair-tech/funfair-server-hashchain.git
 git@github.com:funfair-tech/funfair-server-ethereum.git
 git@github.com:funfair-tech/funfair-server-ethereum-networks.git
 git@github.com:funfair-tech/funfair-server-ethereum-contracts.git

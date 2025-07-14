@@ -731,6 +731,14 @@
                 ]
         },
         {
+                "packageId": "FunFair.Keccak",
+                "type": "Keccak hash",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "FunFair.Random",
                 "type": "Random Number support",
                 "exact-match": true,

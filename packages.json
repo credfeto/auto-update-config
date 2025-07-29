@@ -510,8 +510,16 @@
                 "exclude": []
         },
         {
+                "packageId": "FunFair.Content.Provider",
+                "type": "Content package provider",
+                "exact-match": false,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": false,
+                "exclude": []
+        },
+        {
                 "packageId": "FunFair.Content.Package.Management",
-                "type": "Client Packages",
+                "type": "Content package loading an",
                 "exact-match": false,
                 "version-bump-package": true,
                 "prohibit-version-bump-when-referenced": false,

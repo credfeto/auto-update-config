@@ -9,11 +9,6 @@
       "repo": "template",
       "match": "contains",
       "include": true
-    },
-    {
-      "repo": "git@github.com:funfair-tech/funfair-server-content-package.git",
-      "match": "exact",
-      "include": true
     }
   ],
   "allowedAutoUpgrade": [

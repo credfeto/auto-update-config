@@ -55,6 +55,10 @@ def base_main_branch_protection_settings():
                 {
                     "context": "dependency-review",
                     "app_id": 15368
+                },
+                {
+                    "context": "build-pre-release",
+                    "app_id": 15368
                 }
             ]
         },

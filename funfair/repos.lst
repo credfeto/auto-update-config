@@ -1,9 +1,9 @@
 git@github.com:credfeto/cs-template.git
 git@github.com:funfair-tech/funfair-server-repo-config.git
+git@github.com:funfair-tech/funfair-server-test.git
+git@github.com:funfair-tech/funfair-server-code-analysis.git
 git@github.com:funfair-tech/BuildBot.git
 git@github.com:funfair-tech/funfair-server-discord-coinbot.git
-git@github.com:funfair-tech/funfair-server-code-analysis.git
-git@github.com:funfair-tech/funfair-server-test.git
 git@github.com:funfair-tech/funfair-build-check.git
 git@github.com:funfair-tech/funfair-build-version.git
 git@github.com:funfair-tech/funfair-server-common.git
@@ -20,6 +20,5 @@ git@github.com:funfair-tech/funfair-server-content-package.git
 git@github.com:funfair-tech/funfair-server-content-package-management.git
 git@github.com:funfair-tech/funfair-server-content-package-builder.git
 git@github.com:funfair-tech/funfair-server-client-package.git
-git@github.com:funfair-tech/funfair-server-signalr-hub.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server.git
 git@github.com:funfair-tech/funfair-ethereum-proxy-server-monitor.git

@@ -45,8 +45,10 @@
     "files": {
       ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",
       ".github/actions/nuget-push-separate-symbol-feed/actions.yml": "Obsolete action",
+      ".github/workflows/oss-scorecared.yml": "Obsolete action",
       ".github/workflows/reformat-sql.yml": "Obsolete action",
       ".github/workflows/reformat-yaml.yml": "Obsolete action",
+      ".github/workflows/todos.yml": "Obsolete action",
       ".github/actions/build-check/actions.yml": "Obsolete action"
     }
   }

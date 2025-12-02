@@ -2,6 +2,7 @@
   "general": {
     "files": {
       ".editorconfig": "Editor Config",
+      ".globalconfig": "Global Config",
       ".csharpierrc": "CSharpier Config",
       ".csharpierrc.json": "CSharpier Config",
       ".csharpierrc.yaml": "CSharpier Config",
@@ -17,7 +18,6 @@
     "global-json": true,
     "resharper-dotsettings": true,
     "files": {
-      "CodeAnalysis.ruleset": "Code analysis",
       "Directory.Build.props": "C# Directory Build Properties",
       "FunFair.props": "Build Props",
       "UnitTests.props": "C# Unit test Build Properties",
@@ -45,6 +45,7 @@
   },
   "cleanup": {
     "files": {
+      "src/CodeAnalysis.ruleset": "Obsolete C# Ruleset",
       ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",
       ".github/actions/nuget-push-separate-symbol-feed/actions.yml": "Obsolete action",
       ".github/workflows/reformat-sql.yml": "Obsolete action",

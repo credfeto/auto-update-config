@@ -834,6 +834,14 @@
                 "exclude": []
         },
         {
+                "packageId": "FunFair.Test.Source.Generator",
+                "type": "Test Infrastructure",
+                "exact-match": true,
+                "version-bump-package": true,
+                "prohibit-version-bump-when-referenced": true,
+                "exclude": []
+        },
+        {
                 "packageId": "HexMate",
                 "type": "Hex to byte conversion",
                 "exact-match": true,

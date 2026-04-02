@@ -41,7 +41,7 @@ jobs:
         cat README.md
 
     - name: "Commit and push if repos changed"
-      uses: stefanzweifel/git-auto-commit-action@v5.1.0
+      uses: stefanzweifel/git-auto-commit-action@v7.1.0
       with:
         commit_message: "Updated personal repos"
         file_pattern: "personal/repos.lst"

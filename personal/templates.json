@@ -13,6 +13,19 @@
       ".tsqllintrc": "SQL Lint Config",
       "CONTRIBUTING.md": "Documentation",
       "SECURITY.md": "Documentation"
+    },
+    "mirror-folders": {
+      ".github/instructions": "Config",
+      "ai/global": "AI"
+    },
+    "partial-files": {
+      "ai/local/index.md": {
+        "type": "AI",
+        "match": {
+          "begin": "<-- Globally Maintained -->",
+          "end": "<-- Locally Maintained -->"
+        }
+      }
     }
   },
   "dotNet": {

@@ -64,7 +64,8 @@
       ".github/workflows/reformat-sql.yml": "Obsolete action",
       ".github/workflows/reformat-yaml.yml": "Obsolete action",
       ".github/workflows/todos.yml": "Obsolete action",
-      ".github/actions/build-check/actions.yml": "Obsolete action"
+      ".github/actions/build-check/actions.yml": "Obsolete action",
+      ".github/workflows/merge-dependabot.yml": "Replaced by approve-dependabot.yml native auto-merge"
     }
   }
 }

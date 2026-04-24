@@ -53,6 +53,7 @@
       ".github/actions/nuget-push-integrated-symbol-feed/actions.yml": "Obsolete action",
       ".github/actions/nuget-push-separate-symbol-feed/actions.yml": "Obsolete action",
       ".github/workflows/reformat-sql.yml": "Obsolete action",
+      ".github/workflows/merge-dependabot.yml": "Replaced by approve-dependabot.yml native auto-merge",
       ".github/workflows/reformat-yaml.yml": "Obsolete action"
     }
   }

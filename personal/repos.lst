@@ -5,17 +5,12 @@ git@github.com:credfeto/scripts.git
 git@github.com:credfeto/credfeto-dotnet-package-update.git
 git@github.com:credfeto/scratch.git
 git@github.com:credfeto/auto-update-config.git
-git@github.com:credfeto/action-case-checker.git
-git@github.com:credfeto/action-dotnet-version-detect.git
 git@github.com:credfeto/cs-template.git
 git@github.com:credfeto/credfeto.git
 git@github.com:credfeto/credfeto-nuget-multi-push.git
 git@github.com:credfeto/credfeto-changlog-manager.git
 git@github.com:credfeto/credfeto-notes.git
 git@github.com:credfeto/credfeto-notification-bot.git
-git@github.com:credfeto/action-no-ignored-files.git
-git@github.com:credfeto/action-repo-visibility.git
-git@github.com:credfeto/credfeto-config-backup.git
 git@github.com:credfeto/credfeto-enum-source-generation.git
 git@github.com:credfeto/credfeto-date.git
 git@github.com:credfeto/credfeto-extensions-linq.git
@@ -23,7 +18,6 @@ git@github.com:credfeto/credfeto-random.git
 git@github.com:credfeto/credfeto-services-startup.git
 git@github.com:credfeto/credfeto-database-source-generator.git
 git@github.com:credfeto/credfeto-dotnet-repo-tools.git
-git@github.com:credfeto/linux-setup.git
 git@github.com:credfeto/credfeto-flatpak-filter.git
 git@github.com:credfeto/package-logs.git
 git@github.com:credfeto/credfeto-systemd.git
@@ -50,7 +44,6 @@ git@github.com:credfeto/credfeto-dotnet-codeanalysis-override.git
 git@github.com:credfeto/credfeto-local-aur-cache.git
 git@github.com:credfeto/credfeto-aur2repo.git
 git@github.com:credfeto/credfeto-setup-arch-vm.git
-git@github.com:credfeto/credfeto-mastodon.git
 git@github.com:credfeto/credfeto-connectivity-test.git
 git@github.com:credfeto/credfeto-inbucket.git
 git@github.com:credfeto/credfeto-music-assistant.git

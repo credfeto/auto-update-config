@@ -12,6 +12,4 @@ This is an index of local instructions that apply to just this project.
 - The rules above this point in the file should be considered global rules.
 
 ## Instruction Files
-
-- [Repository Structure](repo-structure.instructions.md) — what files exist, what each `templates.json` section means, and how to add/remove/replace files across managed repos.
 <-- Locally Maintained -->

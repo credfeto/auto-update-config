@@ -1,104 +1,95 @@
-from python_graphql_client import GraphqlClient
-import feedparser
-import httpx
 import json
-import pathlib
-import re
 import os
+import pathlib
+from typing import Any
+
+from python_graphql_client import GraphqlClient
 
 root = pathlib.Path(__file__).parent.resolve()
-client = GraphqlClient(endpoint="https://api.github.com/graphql")
+
+GITHUB_USER = "credfeto"
+GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
+
+EXCLUDED_REPOS = {
+    "git@github.com:credfeto/opnsense-config.git",
+    "git@github.com:credfeto/chains.git",
+    "git@github.com:credfeto/infobeamer-browser.git",
+    "git@github.com:credfeto/credfeto-batch-updates.git",
+}
 
 
-TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
-
-
-def make_query(after_cursor=None):
-    return """
-query {
-  viewer {
-    repositories(first: 100, affiliations:[OWNER], after:AFTER) {
-      pageInfo {
+def make_query(after_cursor: str | None = None) -> str:
+    after_value = f'"{after_cursor}"' if after_cursor else "null"
+    return f"""
+query {{
+  viewer {{
+    repositories(first: 100, affiliations:[OWNER], after:{after_value}) {{
+      pageInfo {{
         hasNextPage
         endCursor
-      }
-      nodes {
+      }}
+      nodes {{
         name
         sshUrl
         homepageUrl
         isArchived
         isFork
-      }
-    }
-  }
-}
-""".replace(
-        "AFTER", '"{}"'.format(after_cursor) if after_cursor else "null"
-    )
+      }}
+    }}
+  }}
+}}
+"""
 
 
-def is_excluded(ssh_url):
-    if ssh_url == 'git@github.com:credfeto/opnsense-config.git':
-        return True
-
-    if ssh_url == 'git@github.com:credfeto/chains.git':
-        return True
-        
-    if ssh_url == 'git@github.com:credfeto/infobeamer-browser.git':
-        return True
-    
-    if ssh_url == 'git@github.com:credfeto/credfeto-batch-updates.git':
-        return True
-
-    return False
+def is_excluded(ssh_url: str) -> bool:
+    return ssh_url in EXCLUDED_REPOS
 
 
-def is_updatable_repo(repo):
+def is_updatable_repo(repo: dict[str, Any]) -> bool:
     if repo["isArchived"]:
         return False
-
     if repo["isFork"]:
         return False
-
     if is_excluded(repo["sshUrl"]):
         return False
-
     return True
 
 
-def fetch_repos(oauth_token):
+def fetch_repos(graphql_client: GraphqlClient, oauth_token: str) -> list[str]:
     repositories = []
     has_next_page = True
     after_cursor = None
 
     while has_next_page:
-        data = client.execute(
+        data = graphql_client.execute(
             query=make_query(after_cursor),
-            headers={"Authorization": "Bearer {}".format(oauth_token)},
+            headers={"Authorization": f"Bearer {oauth_token}"},
         )
         print()
         print(json.dumps(data, indent=4))
         print()
-        for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-            print(repo["sshUrl"] + " => Archived = " + str(repo["isArchived"]) + " => IsFork = " + str(repo["isFork"]))
+        viewer_repos = data["data"]["viewer"]["repositories"]
+        for repo in viewer_repos["nodes"]:
+            print(f"{repo['sshUrl']} => Archived = {repo['isArchived']} => IsFork = {repo['isFork']}")
             if is_updatable_repo(repo):
                 repositories.append(repo["sshUrl"])
 
-        has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
-            "hasNextPage"
-        ]
-        after_cursor = data["data"]["viewer"]["repositories"]["pageInfo"]["endCursor"]
+        page_info = viewer_repos["pageInfo"]
+        has_next_page = page_info["hasNextPage"]
+        after_cursor = page_info["endCursor"]
+
     return repositories
 
 
-def update():
-    repository_list_file = root / "personal/repos.lst"
-    repos = fetch_repos(TOKEN)
-
-    md = "\n".join(repos)
-
-    repository_list_file.open("w").write(md)
+def update(graphql_client: GraphqlClient, token: str, output_file: pathlib.Path) -> None:
+    repos = fetch_repos(graphql_client, token)
+    output_file.write_text("\n".join(repos))
 
 
 if __name__ == "__main__":
-    update()
+    if not GITHUB_TOKEN:
+        raise ValueError("SOURCE_PUSH_TOKEN environment variable is not set")
+
+    _client = GraphqlClient(endpoint="https://api.github.com/graphql")
+    _output = root / "personal/repos.lst"
+    update(_client, GITHUB_TOKEN, _output)

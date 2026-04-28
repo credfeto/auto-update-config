@@ -1,72 +1,35 @@
-import base64
-import urllib.parse
-
-import feedparser
-import httpx
-import json
-import gzip
-import pathlib
-import re
 import os
-from urllib.request import Request, urlopen
+import pathlib
+
+from github_client import GitHubClient
 
 root = pathlib.Path(__file__).parent.resolve()
-github_api_base_url = "https://api.github.com"
 
 GITHUB_USER = "credfeto"
 GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
-TEAMCITY_TOKEN = os.environ.get("TEAMCITY_READ_API_KEY", "")
 ALWAYS_COLLABORATORS = os.environ.get("ALWAYS_COLLABORATORS", "")
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.56"
 
 
-def base_main_branch_protection_settings():
+def base_main_branch_protection_settings() -> dict:
     return {
         "required_status_checks": {
             "strict": True,
             "checks": [
-                {
-                    "context": "does-not-contain-secrets",
-                    "app_id": 15368
-                },
-                {
-                    "context": "has-no-merge-conflicts",
-                    "app_id": 15368
-                },
-                {
-                    "context": "include-changelog-entry",
-                    "app_id": 15368
-                },
-                {
-                    "context": "no-ignored-files",
-                    "app_id": 15368
-                },
-                {
-                    "context": "has-no-file-or-folder-case-sensitivity-issues",
-                    "app_id": 15368
-                },
-                {
-                    "context": "change-log-entry-is-in-unreleased",
-                    "app_id": 15368
-                },
-                {
-                    "context": "lint-code",
-                    "app_id": 15368
-                },
-                {
-                    "context": "dependency-review",
-                    "app_id": 15368
-                },
-                {
-                    "context": "build-pre-release",
-                    "app_id": 15368
-                }
-            ]
+                {"context": "does-not-contain-secrets", "app_id": 15368},
+                {"context": "has-no-merge-conflicts", "app_id": 15368},
+                {"context": "include-changelog-entry", "app_id": 15368},
+                {"context": "no-ignored-files", "app_id": 15368},
+                {"context": "has-no-file-or-folder-case-sensitivity-issues", "app_id": 15368},
+                {"context": "change-log-entry-is-in-unreleased", "app_id": 15368},
+                {"context": "lint-code", "app_id": 15368},
+                {"context": "dependency-review", "app_id": 15368},
+                {"context": "build-pre-release", "app_id": 15368},
+            ],
         },
         "required_pull_request_reviews": {
             "dismiss_stale_reviews": True,
             "require_code_owner_reviews": True,
-            "required_approving_review_count": 1
+            "required_approving_review_count": 1,
         },
         "restrictions": None,
         "required_signatures": False,
@@ -74,267 +37,112 @@ def base_main_branch_protection_settings():
         "required_linear_history": False,
         "allow_force_pushes": False,
         "allow_deletions": False,
-        "required_conversation_resolution": True
+        "required_conversation_resolution": True,
     }
 
 
-def have_branch_protection_settings_changed(existing_settings, new_settings):
+def repo_url_to_owner_and_name(repo_url: str) -> dict | None:
+    if repo_url.startswith("git@github.com:"):
+        parts = repo_url[15:-4].split("/")
+        return {"owner": parts[0], "repo": parts[1]}
+    if repo_url.startswith("https://github.com/"):
+        parts = repo_url[8:].split("/")
+        return {"owner": parts[1], "repo": parts[2]}
+    return None
 
+
+def has_existing_check(existing_settings: dict, name: str) -> bool:
+    if "required_status_checks" not in existing_settings:
+        return False
+    if "checks" not in existing_settings["required_status_checks"]:
+        return False
+    return any(c["context"] == name for c in existing_settings["required_status_checks"]["checks"])
+
+
+def have_branch_protection_settings_changed(existing_settings: dict, new_settings: dict) -> bool:
     if "required_status_checks" not in existing_settings:
         return True
 
-    # Branch Must Be Up-to date
-    if existing_settings["required_status_checks"]["strict"] != new_settings["required_status_checks"]["strict"]:
+    existing_sc = existing_settings["required_status_checks"]
+    new_sc = new_settings["required_status_checks"]
+
+    if existing_sc["strict"] != new_sc["strict"]:
         print("required_status_checks:strict different")
         return True
 
-    # checks [ check each context ]
-    existing_checks = []
-    if "checks" in existing_settings["required_status_checks"]:
-        existing_checks = existing_settings["required_status_checks"]["checks"]
-
-    new_checks = new_settings["required_status_checks"]["checks"]
-    for new_check in new_checks:
-
-        existing_check = None
-        for candidate in existing_checks:
-            if candidate["context"] == new_check["context"]:
-                existing_check = candidate
-                break
-
+    existing_checks = existing_sc.get("checks", [])
+    for new_check in new_sc["checks"]:
+        existing_check = next((c for c in existing_checks if c["context"] == new_check["context"]), None)
         if not existing_check:
-            print("required_status_checks:checks:" + new_check["context"] + " different (missing)")
+            print(f"required_status_checks:checks:{new_check['context']} different (missing)")
             return True
-
         existing_app_id = existing_check["app_id"]
         new_app_id = new_check["app_id"]
         if new_app_id == -1:
             if existing_app_id is not None:
-                print("required_status_checks:checks:" + new_check["context"] + " different (app_id: target)")
+                print(f"required_status_checks:checks:{new_check['context']} different (app_id: target)")
                 return True
         else:
             if existing_app_id is None:
-                print("required_status_checks:checks:" + new_check["context"] + " different (app_id: source)")
+                print(f"required_status_checks:checks:{new_check['context']} different (app_id: source)")
                 return True
             if existing_app_id != new_app_id:
-                print("required_status_checks:checks:" + new_check["context"] + " different (app_id: different ids)")
+                print(f"required_status_checks:checks:{new_check['context']} different (app_id: different ids)")
                 return True
 
-    if existing_settings["required_status_checks"]["checks"] != new_settings["required_status_checks"]["checks"]:
+    if len(existing_checks) != len(new_sc["checks"]):
         print("required_status_checks:checks different")
         return True
 
-    # required_pull_request_reviews : dismiss_stale_reviews
-    if existing_settings["required_pull_request_reviews"]["dismiss_stale_reviews"] != new_settings["required_pull_request_reviews"]["dismiss_stale_reviews"]:
+    existing_pr = existing_settings["required_pull_request_reviews"]
+    new_pr = new_settings["required_pull_request_reviews"]
+    if existing_pr["dismiss_stale_reviews"] != new_pr["dismiss_stale_reviews"]:
         print("required_pull_request_reviews:dismiss_stale_reviews different")
         return True
-
-    # required_pull_request_reviews : require_code_owner_reviews
-    if existing_settings["required_pull_request_reviews"]["require_code_owner_reviews"] != new_settings["required_pull_request_reviews"]["require_code_owner_reviews"]:
+    if existing_pr["require_code_owner_reviews"] != new_pr["require_code_owner_reviews"]:
         print("required_pull_request_reviews:require_code_owner_reviews different")
         return True
-
-    # required_pull_request_reviews : required_approving_review_count
-    if existing_settings["required_pull_request_reviews"]["required_approving_review_count"] != new_settings["required_pull_request_reviews"]["required_approving_review_count"]:
+    if existing_pr["required_approving_review_count"] != new_pr["required_approving_review_count"]:
         print("required_pull_request_reviews:required_approving_review_count different")
         return True
 
-    # required_signatures
     if existing_settings["required_signatures"]["enabled"] != new_settings["required_signatures"]:
         print("required_signatures different")
         return True
-
-    # enforce_admins
     if existing_settings["enforce_admins"]["enabled"] != new_settings["enforce_admins"]:
         print("enforce_admins different")
         return True
-
-    # required_linear_history
     if existing_settings["required_linear_history"]["enabled"] != new_settings["required_linear_history"]:
         return True
-
-    # allow_force_pushes
     if existing_settings["allow_force_pushes"]["enabled"] != new_settings["allow_force_pushes"]:
         return True
-
-    # allow_deletions
     if existing_settings["allow_deletions"]["enabled"] != new_settings["allow_deletions"]:
         return True
-
-    # required_conversation_resolution
     if existing_settings["required_conversation_resolution"]["enabled"] != new_settings["required_conversation_resolution"]:
         return True
 
     return False
 
 
-def get_branch_protection_settings(owner, repo, branch):
-
+def get_branch_protection_settings(client: GitHubClient, owner: str, repo: str, branch: str) -> dict | None:
     try:
-        settings = get_github("/repos/" + owner + "/" + repo + "/branches/"+branch+"/protection")
+        return client.get(f"/repos/{owner}/{repo}/branches/{branch}/protection")
     except Exception:
         return None
 
-    return settings
 
-
-def set_branch_protection_settings(owner, repo, branch, settings):
+def set_branch_protection_settings(client: GitHubClient, owner: str, repo: str, branch: str, settings: dict) -> bool:
     try:
-        settings = put_github("/repos/" + owner + "/" + repo + "/branches/"+branch+"/protection", settings)
-    except Exception as e:
-
-        print(e)
+        result = client.put(f"/repos/{owner}/{repo}/branches/{branch}/protection", settings)
+        print(result)
+        return True
+    except Exception as exc:
+        print(exc)
         print("############################################################")
         return False
 
-    print(settings)
-    return True
 
-
-def basic_auth(user, password):
-    message = user + ":" + password
-    message_bytes = message.encode('ascii')
-    base64_bytes = base64.b64encode(message_bytes)
-    base64_message = base64_bytes.decode('ascii')
-
-    return base64_message
-
-
-def get_github(path):
-    url = github_api_base_url + path
-
-    print("Connect to GET " + url)
-    #    print("Token: " + TEAMCITY_TOKEN)
-
-    token = basic_auth(GITHUB_USER, GITHUB_TOKEN)
-
-    request = Request(url)
-    request.add_header('Accept', 'application/json')
-    request.add_header('Accept-Encoding', 'deflate, gzip')
-    request.add_header('Authorization', 'BASIC ' + token)
-    request.add_header('User-Agent', USER_AGENT)
-
-    response = urlopen(request)
-
-    content = response.read()
-    try:
-        content = gzip.decompress(content)
-    except gzip.BadGzipFile as e:
-        return json.loads(content)
-
-    return json.loads(content)
-
-
-def put_github(path, data):
-    url = github_api_base_url + path
-
-    print("Connect to PUT " + url)
-    #    print("Token: " + TEAMCITY_TOKEN)
-
-    token = basic_auth(GITHUB_USER, GITHUB_TOKEN)
-
-    json_data = json.dumps(data)
-    print(json_data)
-    post_data = json_data.encode()
-
-    request = Request(url=url, data=post_data, method='PUT')
-
-    request.add_header('Accept', 'application/json')
-    request.add_header('Accept-Encoding', 'deflate, gzip')
-    request.add_header('Content-Type', 'application/json')
-    request.add_header('Authorization', 'BASIC ' + token)
-    request.add_header('User-Agent', USER_AGENT)
-    print(request.get_method())
-
-    response = urlopen(request)
-
-    content = response.read()
-    try:
-        content = gzip.decompress(content)
-    except gzip.BadGzipFile as e:
-        return json.loads(content)
-
-    return json.loads(content)
-
-
-def patch_github(path, data):
-    url = github_api_base_url + path
-
-    print("Connect to PATCH " + url)
-    #    print("Token: " + TEAMCITY_TOKEN)
-
-    token = basic_auth(GITHUB_USER, GITHUB_TOKEN)
-
-    json_data = json.dumps(data)
-    print(json_data)
-    post_data = json_data.encode()
-
-    request = Request(url=url, data=post_data, method='PATCH')
-
-    request.add_header('Accept', 'application/json')
-    request.add_header('Accept-Encoding', 'deflate, gzip')
-    request.add_header('Content-Type', 'application/json')
-    request.add_header('Authorization', 'BASIC ' + token)
-    request.add_header('User-Agent', USER_AGENT)
-    print(request.get_method())
-
-    response = urlopen(request)
-
-    content = response.read()
-    try:
-        content = gzip.decompress(content)
-    except gzip.BadGzipFile as e:
-        return json.loads(content)
-
-    return json.loads(content)
-
-
-def repo_url_to_owner_and_name(repo_url):
-    # git@github.com:funfair-tech/funfair-games.git
-    # https://github.com/funfair-tech/funfair-labs-tictactoe-server
-
-    if repo_url.startswith("git@github.com:"):
-        split = repo_url[15:-4].split("/")
-        return {
-            "owner": split[0],
-            "repo": split[1]
-        }
-
-    if repo_url.startswith("https://github.com/"):
-        split = repo_url[8:].split("/")
-        return {
-            "owner": split[1],
-            "repo": split[2]
-        }
-
-    return None
-
-
-def add_teamcity_build(settings, project_name):
-    settings["required_status_checks"]["checks"].append({"context": project_name, "app_id": -1})
-
-
-def add_github_build(settings, project_name):
-    settings["required_status_checks"]["checks"].append({"context": project_name, "app_id": 15368})
-
-
-def has_existing_check(existing_settings, name):
-
-    if "required_status_checks" not in existing_settings:
-        return False
-
-    if "checks" not in existing_settings["required_status_checks"]:
-        return False
-
-    checks = existing_settings["required_status_checks"]["checks"]
-    for check in checks:
-        if check["context"] == name:
-            return True
-
-    return False
-
-
-def update_repo_settings(owner, name):
+def update_repo_settings(client: GitHubClient, owner: str, name: str) -> None:
     repo_settings = {
         "has_issues": True,
         "has_projects": False,
@@ -347,93 +155,95 @@ def update_repo_settings(owner, name):
         "allow_update_branch": True,
         "archive-program-opt-out-feature": True,
         "merge_commit_title": "PR_TITLE",
-        "merge_commit_message": "PR_BODY"
+        "merge_commit_message": "PR_BODY",
     }
+    client.patch(f"/repos/{owner}/{name}", repo_settings)
 
-    patch_github("/repos/" + owner + "/" + name, repo_settings)
 
-
-def update_repo_actions_workflow_permissions(owner, name):
-    workflow_permissions = {
-        "can_approve_pull_request_reviews": True
-    }
-
+def update_repo_actions_workflow_permissions(client: GitHubClient, owner: str, name: str) -> None:
     try:
-        put_github("/repos/" + owner + "/" + name + "/actions/permissions/workflow", workflow_permissions)
-    except Exception as e:
-        print(e)
+        client.put(f"/repos/{owner}/{name}/actions/permissions/workflow", {"can_approve_pull_request_reviews": True})
+    except Exception as exc:
+        print(exc)
         print("############################################################")
 
 
-def invite_collaborators(owner, name, collaborators):
-    print("Inviting collaborators to " + owner + "/" + name + ": " + str(collaborators))
+def invite_collaborators(client: GitHubClient, owner: str, name: str, collaborators: list[str]) -> None:
+    print(f"Inviting collaborators to {owner}/{name}: {collaborators}")
     for collaborator in collaborators:
         try:
-            result = put_github("/repos/" + owner + "/" + name + "/collaborators/" + collaborator, {"permission": "push"})
-            print("Invited collaborator: " + collaborator + " -> " + str(result))
-        except Exception as e:
-            print("Failed to invite collaborator: " + collaborator)
-            print(e)
+            result = client.put(f"/repos/{owner}/{name}/collaborators/{collaborator}", {"permission": "push"})
+            print(f"Invited collaborator: {collaborator} -> {result}")
+        except Exception as exc:
+            print(f"Failed to invite collaborator: {collaborator}")
+            print(exc)
             print("############################################################")
 
 
-def add_existing_github_check(existing_settings, new_settings, build_name):
+def add_github_build(settings: dict, project_name: str) -> None:
+    settings["required_status_checks"]["checks"].append({"context": project_name, "app_id": 15368})
+
+
+def add_existing_github_check(existing_settings: dict, new_settings: dict, build_name: str) -> None:
     if has_existing_check(existing_settings, build_name):
-        print("****** Found Matching Build: " + build_name)
+        print(f"****** Found Matching Build: {build_name}")
         add_github_build(new_settings, build_name)
         print(new_settings)
 
 
-def update():
-    if GITHUB_TOKEN == "":
-        raise ValueError("Invalid Github token")
+SKIP_BRANCH_PROTECTION_REPOS = {
+    "git@github.com:credfeto/auto-update-config.git",
+    "git@github.com:credfeto/credfeto.git",
+}
 
-    collaborators = [c.strip() for c in ALWAYS_COLLABORATORS.split(",") if c.strip()]
-    print("ALWAYS_COLLABORATORS raw: '" + ALWAYS_COLLABORATORS + "'")
-    print("Parsed collaborators: " + str(collaborators))
 
-    repository_list_file = root / "personal/repos.lst"
-    print(repository_list_file)
-
-    repos = repository_list_file.open("r").read().splitlines()
-    print(repos)
-
+def update(client: GitHubClient, collaborators: list[str], repos: list[str]) -> None:
     for repo in repos:
         print("*****************************************************************************")
         print(repo)
 
         repo_parts = repo_url_to_owner_and_name(repo)
-        if repo_parts:
-            update_repo_settings(repo_parts["owner"], repo_parts["repo"])
-            update_repo_actions_workflow_permissions(repo_parts["owner"], repo_parts["repo"])
-            if collaborators:
-                invite_collaborators(repo_parts["owner"], repo_parts["repo"], collaborators)
+        if not repo_parts:
+            continue
 
-            if repo == 'git@github.com:credfeto/auto-update-config.git':
-                continue
+        owner = repo_parts["owner"]
+        name = repo_parts["repo"]
 
-            if repo == 'git@github.com:credfeto/credfeto.git':
-                continue
+        update_repo_settings(client, owner, name)
+        update_repo_actions_workflow_permissions(client, owner, name)
+        if collaborators:
+            invite_collaborators(client, owner, name, collaborators)
 
-            new_settings = base_main_branch_protection_settings()
-            print(new_settings)
+        if repo in SKIP_BRANCH_PROTECTION_REPOS:
+            continue
 
-            existing_settings = get_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main')
-            print(existing_settings)
+        new_settings = base_main_branch_protection_settings()
+        print(new_settings)
 
-            if existing_settings:
-                add_existing_github_check(existing_settings, new_settings, "build-contracts")
+        existing_settings = get_branch_protection_settings(client, owner, name, "main")
+        print(existing_settings)
 
-                print("**** CHECK UPDATE")
-                changed = have_branch_protection_settings_changed(existing_settings, new_settings)
-                if changed:
-                    set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main', new_settings)
-            else:
-                set_branch_protection_settings(repo_parts["owner"], repo_parts["repo"], 'main', new_settings)
-
-        # ABORT AT FIRST ONE FOR NOW
-        # break
+        if existing_settings:
+            add_existing_github_check(existing_settings, new_settings, "build-contracts")
+            print("**** CHECK UPDATE")
+            if have_branch_protection_settings_changed(existing_settings, new_settings):
+                set_branch_protection_settings(client, owner, name, "main", new_settings)
+        else:
+            set_branch_protection_settings(client, owner, name, "main", new_settings)
 
 
 if __name__ == "__main__":
-    update()
+    if not GITHUB_TOKEN:
+        raise ValueError("SOURCE_PUSH_TOKEN environment variable is not set")
+
+    parsed_collaborators = [c.strip() for c in ALWAYS_COLLABORATORS.split(",") if c.strip()]
+    print(f"ALWAYS_COLLABORATORS raw: '{ALWAYS_COLLABORATORS}'")
+    print(f"Parsed collaborators: {parsed_collaborators}")
+
+    repository_list_file = root / "personal/repos.lst"
+    print(repository_list_file)
+
+    parsed_repos = repository_list_file.open("r").read().splitlines()
+    print(parsed_repos)
+
+    update(GitHubClient(GITHUB_USER, GITHUB_TOKEN), parsed_collaborators, parsed_repos)

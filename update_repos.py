@@ -352,6 +352,18 @@ def update_repo_settings(owner, name):
     patch_github("/repos/" + owner + "/" + name, repo_settings)
 
 
+def update_repo_actions_workflow_permissions(owner, name):
+    workflow_permissions = {
+        "can_approve_pull_request_reviews": True
+    }
+
+    try:
+        put_github("/repos/" + owner + "/" + name + "/actions/permissions/workflow", workflow_permissions)
+    except Exception as e:
+        print(e)
+        print("############################################################")
+
+
 def add_existing_github_check(existing_settings, new_settings, build_name):
     if has_existing_check(existing_settings, build_name):
         print("****** Found Matching Build: " + build_name)
@@ -376,6 +388,7 @@ def update():
         repo_parts = repo_url_to_owner_and_name(repo)
         if repo_parts:
             update_repo_settings(repo_parts["owner"], repo_parts["repo"])
+            update_repo_actions_workflow_permissions(repo_parts["owner"], repo_parts["repo"])
 
             if repo == 'git@github.com:credfeto/auto-update-config.git':
                 continue

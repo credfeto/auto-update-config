@@ -1,0 +1,19 @@
+[MESSAGES CONTROL]
+disable =
+    C0103,
+    C0114,
+    C0116,
+    C0209,
+    C0303,
+    C0411,
+    E0401,
+    E0702,
+    R0911,
+    R0912,
+    R1732,
+    W0611,
+    W0612,
+    W0718
+
+[FORMAT]
+max-line-length = 200

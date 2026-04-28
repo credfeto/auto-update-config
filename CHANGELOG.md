@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 
 - Added .ai-instructions with reminder to wire new environment variables into workflow env blocks
 - Refactored Python scripts to use dependency injection and added pytest test suite
+- Split test classes into one-per-file and documented convention in ai/local/python-tests.instructions.md
 
 ### Fixed
 

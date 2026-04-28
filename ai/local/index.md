@@ -1,7 +1,7 @@
 <!-- Globally Maintained -->
 # Local instructions
 
-This is an index of local instructions that apply to just this project. 
+This is an index of local instructions that apply to just this project.
 - Ensure consistency across this file with respect to the global instructions.
 - This file should be considered an index of local instructions.
 - Each file other than this one should be named in the format `<category>.instructions.md` Where `<category>` is the category of the file and all related rules should be listed there.
@@ -13,3 +13,8 @@ This is an index of local instructions that apply to just this project.
 
 ## Instruction Files
 <!-- Locally Maintained -->
+
+| File | Summary |
+| --- | --- |
+| [repo-structure.instructions.md](repo-structure.instructions.md) | Repository layout, `templates.json` schema, script purposes |
+| [python-tests.instructions.md](python-tests.instructions.md) | One test class per file, naming convention, pylint disables |

@@ -17,4 +17,4 @@ This is an index of local instructions that apply to just this project.
 | File | Summary |
 | --- | --- |
 | [repo-structure.instructions.md](repo-structure.instructions.md) | Repository layout, `templates.json` schema, script purposes |
-| [python-tests.instructions.md](python-tests.instructions.md) | One test class per file, naming convention, pylint disables |
+| [python.instructions.md](python.instructions.md) | Python conventions: one test class per file, naming, pylint disables |

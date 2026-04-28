@@ -386,7 +386,7 @@ def add_existing_github_check(existing_settings, new_settings, build_name):
 
 def update():
     if GITHUB_TOKEN == "":
-        raise "Invalid Github token"
+        raise ValueError("Invalid Github token")
 
     collaborators = [c.strip() for c in ALWAYS_COLLABORATORS.split(",") if c.strip()]
     print("ALWAYS_COLLABORATORS raw: '" + ALWAYS_COLLABORATORS + "'")

@@ -1,6 +1,18 @@
-# Python Test Conventions
+# Python Conventions
 
 [Back to Local Instructions Index](index.md)
+
+## Language version
+
+Always target the latest stable release of Python 3. Do not use compatibility shims or feature guards for older versions.
+
+## Style
+
+Write idiomatic Python: use comprehensions, generators, `enumerate`, `zip`, `any`/`all`, context managers, and dataclasses where they make intent clearer. Follow PEP 8 naming and layout conventions throughout.
+
+## Standard library first
+
+Prefer the Python standard library over third-party packages. Only reach for an external dependency when the standard library genuinely cannot do the job (e.g. `httpx` for async-capable HTTP, `python-graphql-client` for GraphQL). Do not write custom implementations of things the standard library already provides (e.g. use `pathlib` not string manipulation for paths, `json` not manual serialisation, `urllib.parse` not hand-rolled URL building).
 
 ## One class per file
 

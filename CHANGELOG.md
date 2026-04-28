@@ -7,6 +7,9 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 
 ## [Unreleased]
 ### Added
+
+- Added .ai-instructions with reminder to wire new environment variables into workflow env blocks
+
 ### Fixed
 
 - Pass ALWAYS_COLLABORATORS secret to workflow so collaborator invites are actually sent

@@ -1,0 +1,15 @@
+## Environment variables
+
+When adding a new `os.environ.get(...)` call to `update_repos.py` (or any other script in this repo), you **must** also add the corresponding `env:` entry to every workflow step that runs that script.
+
+For example, adding `FOO = os.environ.get("FOO", "")` in `update_repos.py` requires:
+
+```yaml
+- name: "Update Repos"
+  env:
+    SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
+    FOO: ${{ secrets.FOO }}        # <-- add this
+  run: python update_repos.py
+```
+
+The relevant workflow is `.github/workflows/update_repo_settings.yml`. If the variable is not a secret (e.g. a plain config value) use `vars.FOO` instead of `secrets.FOO`.

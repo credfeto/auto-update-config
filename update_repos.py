@@ -16,6 +16,7 @@ github_api_base_url = "https://api.github.com"
 GITHUB_USER = "credfeto"
 GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
 TEAMCITY_TOKEN = os.environ.get("TEAMCITY_READ_API_KEY", "")
+ALWAYS_COLLABORATORS = os.environ.get("ALWAYS_COLLABORATORS", "")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.56"
 
 
@@ -364,6 +365,16 @@ def update_repo_actions_workflow_permissions(owner, name):
         print("############################################################")
 
 
+def invite_collaborators(owner, name, collaborators):
+    for collaborator in collaborators:
+        try:
+            put_github("/repos/" + owner + "/" + name + "/collaborators/" + collaborator, {"permission": "push"})
+            print("Invited collaborator: " + collaborator)
+        except Exception as e:
+            print(e)
+            print("############################################################")
+
+
 def add_existing_github_check(existing_settings, new_settings, build_name):
     if has_existing_check(existing_settings, build_name):
         print("****** Found Matching Build: " + build_name)
@@ -374,6 +385,8 @@ def add_existing_github_check(existing_settings, new_settings, build_name):
 def update():
     if GITHUB_TOKEN == "":
         raise "Invalid Github token"
+
+    collaborators = [c.strip() for c in ALWAYS_COLLABORATORS.split(",") if c.strip()]
 
     repository_list_file = root / "personal/repos.lst"
     print(repository_list_file)
@@ -389,6 +402,8 @@ def update():
         if repo_parts:
             update_repo_settings(repo_parts["owner"], repo_parts["repo"])
             update_repo_actions_workflow_permissions(repo_parts["owner"], repo_parts["repo"])
+            if collaborators:
+                invite_collaborators(repo_parts["owner"], repo_parts["repo"], collaborators)
 
             if repo == 'git@github.com:credfeto/auto-update-config.git':
                 continue

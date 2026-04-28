@@ -31,5 +31,6 @@ jobs:
     - name: "Update Repos"
       env:
         SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
+        ALWAYS_COLLABORATORS: ${{ secrets.ALWAYS_COLLABORATORS }}
       run: |-
         python update_repos.py

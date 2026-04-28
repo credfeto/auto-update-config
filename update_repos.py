@@ -366,11 +366,13 @@ def update_repo_actions_workflow_permissions(owner, name):
 
 
 def invite_collaborators(owner, name, collaborators):
+    print("Inviting collaborators to " + owner + "/" + name + ": " + str(collaborators))
     for collaborator in collaborators:
         try:
-            put_github("/repos/" + owner + "/" + name + "/collaborators/" + collaborator, {"permission": "push"})
-            print("Invited collaborator: " + collaborator)
+            result = put_github("/repos/" + owner + "/" + name + "/collaborators/" + collaborator, {"permission": "push"})
+            print("Invited collaborator: " + collaborator + " -> " + str(result))
         except Exception as e:
+            print("Failed to invite collaborator: " + collaborator)
             print(e)
             print("############################################################")
 
@@ -384,9 +386,11 @@ def add_existing_github_check(existing_settings, new_settings, build_name):
 
 def update():
     if GITHUB_TOKEN == "":
-        raise "Invalid Github token"
+        raise ValueError("Invalid Github token")
 
     collaborators = [c.strip() for c in ALWAYS_COLLABORATORS.split(",") if c.strip()]
+    print("ALWAYS_COLLABORATORS raw: '" + ALWAYS_COLLABORATORS + "'")
+    print("Parsed collaborators: " + str(collaborators))
 
     repository_list_file = root / "personal/repos.lst"
     print(repository_list_file)

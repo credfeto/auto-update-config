@@ -1,5 +1,6 @@
 import os
 import pathlib
+from urllib.parse import urlparse
 
 from github_client import GitHubClient
 
@@ -45,9 +46,10 @@ def repo_url_to_owner_and_name(repo_url: str) -> dict | None:
     if repo_url.startswith("git@github.com:"):
         parts = repo_url[15:-4].split("/")
         return {"owner": parts[0], "repo": parts[1]}
-    if repo_url.startswith("https://github.com/"):
-        parts = repo_url[8:].split("/")
-        return {"owner": parts[1], "repo": parts[2]}
+    parsed = urlparse(repo_url)
+    if parsed.scheme in ("http", "https") and parsed.netloc == "github.com":
+        path_parts = parsed.path.strip("/").split("/")
+        return {"owner": path_parts[0], "repo": path_parts[1]}
     return None
 
 
@@ -243,7 +245,7 @@ if __name__ == "__main__":
     repository_list_file = root / "personal/repos.lst"
     print(repository_list_file)
 
-    parsed_repos = repository_list_file.open("r").read().splitlines()
+    parsed_repos = repository_list_file.read_text().splitlines()
     print(parsed_repos)
 
     update(GitHubClient(GITHUB_USER, GITHUB_TOKEN), parsed_collaborators, parsed_repos)

@@ -2,6 +2,19 @@
 
 [Back to Local Instructions Index](index.md)
 
+## Virtual environment
+
+All Python work must be done inside a virtual environment — never install packages into the system Python. Use `.venv` as the directory name (it is gitignored):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate      # Linux/macOS
+.venv\Scripts\activate         # Windows
+pip install -e ".[dev]"
+```
+
+The project is defined in `pyproject.toml`. Runtime dependencies go in `[project].dependencies`; test-only dependencies go in `[project.optional-dependencies].dev`. Do not add packages to `requirements.txt` directly — keep `pyproject.toml` as the single source of truth.
+
 ## Language version
 
 Always target the latest stable release of Python 3. Do not use compatibility shims or feature guards for older versions.

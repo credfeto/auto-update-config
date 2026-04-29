@@ -1,14 +1,16 @@
 {
   "general": {
     "files": {
-      ".editorconfig": "Editor Config",
-      ".globalconfig": "Global Config",
+      ".ansible-lint": "Ansible Lint",
+      ".cfnlintrc.yaml": "Cloudformation Lint",
       ".csharpierrc": "CSharpier Config",
       ".csharpierrc.json": "CSharpier Config",
       ".csharpierrc.yaml": "CSharpier Config",
+      ".editorconfig": "Editor Config",
       ".gitleaks.toml": "Gitleaks Config",
       ".gitignore": "Gitignore config",
       ".gitattributes": "git file attributes config",
+      ".globalconfig": "Global Config",
       ".sqlfluff": "SQLFluff Lint Config",
       ".tsqllintrc": "SQL Lint Config",
       "CONTRIBUTING.md": "Documentation",

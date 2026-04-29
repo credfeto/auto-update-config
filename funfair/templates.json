@@ -11,6 +11,7 @@
       ".gitignore": "Gitignore config",
       ".gitattributes": "git file attributes config",
       ".globalconfig": "Global Config",
+      ".markdownlint.json": "Markdown lint",
       ".sqlfluff": "SQLFluff Lint Config",
       ".tsqllintrc": "SQL Lint Config",
       "CONTRIBUTING.md": "Documentation",

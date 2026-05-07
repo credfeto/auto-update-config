@@ -13,6 +13,7 @@
       ".gitignore": "Gitignore config",
       ".gitattributes": "git file attributes config",
       ".markdownlint.json": "Markdown lint",
+      ".yamllint.yml": "YAML Lint Config",
       ".sqlfluff": "SQLFluff Lint Config",
       ".tsqllintrc": "SQL Lint Config",
       "CLAUDE.md": "Claude Instructions",

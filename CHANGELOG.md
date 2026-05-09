@@ -17,6 +17,8 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - Improved logging for collaborator invite step
 - Fixed obsolete pylint options in super-linter config that caused lint-code check to fail
 - Copy .yamllint.yml to all managed repos to prevent yamllint using default settings and blocking commits via pre-commit hook
+- Removed unnecessary flake8 F401 and F841 ignores that are no longer needed
+- Removed unnecessary pylint suppressions that are no longer needed
 
 ### Changed
 ### Deprecated

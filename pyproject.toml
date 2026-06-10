@@ -17,5 +17,9 @@ dev = [
     "pytest",
 ]
 
+[tool.setuptools]
+packages = ["tests"]
+py-modules = ["build_personal", "github_client", "update_repos"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

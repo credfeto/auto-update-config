@@ -55,3 +55,4 @@ git@github.com:credfeto/credfeto-ssh-key-server.git
 git@github.com:credfeto/credfeto-ssh-key-mgr.git
 git@github.com:credfeto/credfeto-ssh-key-server-docker.git
 git@github.com:credfeto/credfeto-orchestrator.git
+git@github.com:credfeto/credfeto-monitoring.git

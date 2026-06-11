@@ -11,6 +11,7 @@ git@github.com:credfeto/credfeto-nuget-multi-push.git
 git@github.com:credfeto/credfeto-changlog-manager.git
 git@github.com:credfeto/credfeto-notes.git
 git@github.com:credfeto/credfeto-notification-bot.git
+git@github.com:credfeto/credfeto-bash.git
 git@github.com:credfeto/credfeto-enum-source-generation.git
 git@github.com:credfeto/credfeto-extensions-linq.git
 git@github.com:credfeto/credfeto-random.git

@@ -147,7 +147,7 @@ def set_branch_protection_settings(client: GitHubClient, owner: str, repo: str, 
 def update_repo_settings(client: GitHubClient, owner: str, name: str) -> None:
     repo_settings = {
         "has_issues": True,
-        "has_projects": False,
+        "has_projects": True,
         "has_wiki": False,
         "allow_squash_merge": False,
         "allow_merge_commit": True,

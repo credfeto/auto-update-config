@@ -1,0 +1,6 @@
+python-graphql-client==0.4.3
+httpx
+feedparser
+
+[dev]
+pytest

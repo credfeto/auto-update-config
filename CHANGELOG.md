@@ -24,6 +24,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Changed
 ### Deprecated
 ### Removed
+- Removed unused branch protection enforcement code and its tests
 ### Deployment Changes
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch

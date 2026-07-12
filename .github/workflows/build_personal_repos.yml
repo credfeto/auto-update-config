@@ -1,3 +1,4 @@
+---
 name: "Build: Personal Repos"
 
 on:
@@ -10,7 +11,7 @@ on:
       - .github/workflows/build_personal_repos.yml
   workflow_dispatch:
   schedule:
-    - cron:  '32 * * * *'
+    - cron: '32 * * * *'
 
 permissions:
   contents: write
@@ -19,33 +20,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: "Check out repo"
-      uses: actions/checkout@v7
-      with:
-        token: ${{secrets.SOURCE_PUSH_TOKEN}}
+      - name: "Check out repo"
+        uses: actions/checkout@v7
+        with:
+          token: ${{secrets.SOURCE_PUSH_TOKEN}}
 
-    - name: "Set up Python"
-      uses: actions/setup-python@v6.3.0
-      with:
-        python-version: 3.x
+      - name: "Set up Python"
+        uses: actions/setup-python@v6.3.0
+        with:
+          python-version: 3.x
 
-    - name: "Install Python dependencies"
-      run: |
-        python -m pip install -e ".[dev]"
+      - name: "Install Python dependencies"
+        run: |
+          python -m pip install -e ".[dev]"
 
-    - name: "Update Repos"
-      env:
-        SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
-      run: |-
-        python build_personal.py
-        cat README.md
+      - name: "Update Repos"
+        env:
+          SOURCE_PUSH_TOKEN: ${{ secrets.SOURCE_PUSH_TOKEN }}
+        run: |-
+          python build_personal.py
+          cat README.md
 
-    - name: "Commit and push if repos changed"
-      uses: stefanzweifel/git-auto-commit-action@v7.2.0
-      with:
-        commit_message: "Updated personal repos"
-        file_pattern: "personal/repos.lst"
-        commit_user_name: "fun-sqlfmt[bot]"
-        commit_user_email: "credfeto@users.noreply.github.com"
-        commit_author: "repos-bot[bot] <credfeto@users.noreply.github.com>"
-        skip_dirty_check: false
+      - name: "Commit and push if repos changed"
+        uses: stefanzweifel/git-auto-commit-action@v7.2.0
+        with:
+          commit_message: "Updated personal repos"
+          file_pattern: "personal/repos.lst"
+          commit_user_name: "fun-sqlfmt[bot]"
+          commit_user_email: "credfeto@users.noreply.github.com"
+          commit_author: "repos-bot[bot] <credfeto@users.noreply.github.com>"
+          skip_dirty_check: false

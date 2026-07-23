@@ -1,6 +1,9 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
 <!--
 Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 -->
@@ -20,6 +23,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - Copy .yamllint.yml to all managed repos to prevent yamllint using default settings and blocking commits via pre-commit hook
 - Removed unnecessary flake8 F401 and F841 ignores that are no longer needed
 - Removed unnecessary pylint suppressions that are no longer needed
+- Fixed missing trailing newline in personal/repos.lst flagged by the pre-commit end-of-file-fixer baseline check
 
 ### Changed
 ### Deprecated

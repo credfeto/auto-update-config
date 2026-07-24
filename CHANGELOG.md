@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 
 ## [Unreleased]
 ### Security
+- TBD - to be finalized after review
 ### Added
 - Added .ai-instructions with reminder to wire new environment variables into workflow env blocks
 - Refactored Python scripts to use dependency injection and added pytest test suite

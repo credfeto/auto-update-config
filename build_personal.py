@@ -83,7 +83,7 @@ def fetch_repos(graphql_client: GraphqlClient, oauth_token: str) -> list[str]:
 
 def update(graphql_client: GraphqlClient, token: str, output_file: pathlib.Path) -> None:
     repos = fetch_repos(graphql_client, token)
-    output_file.write_text("\n".join(repos))
+    output_file.write_text("".join(f"{repo}\n" for repo in repos))
 
 
 if __name__ == "__main__":

@@ -24,6 +24,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - Removed unnecessary flake8 F401 and F841 ignores that are no longer needed
 - Removed unnecessary pylint suppressions that are no longer needed
 - Fixed missing trailing newline in personal/repos.lst flagged by the pre-commit end-of-file-fixer baseline check
+- Fixed build_personal.py generator to always write a trailing newline to personal/repos.lst so the pre-commit end-of-file-fixer no longer needs to auto-correct it on every run
 
 ### Changed
 ### Deprecated

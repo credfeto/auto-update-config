@@ -10,7 +10,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 
 ## [Unreleased]
 ### Security
-- TBD - to be finalized after review
+- Pinned GitHub Actions in workflows to immutable commit SHAs instead of mutable tags, preventing upstream tag repointing (accidental or malicious) from silently changing executed code
 ### Added
 - Added .ai-instructions with reminder to wire new environment variables into workflow env blocks
 - Refactored Python scripts to use dependency injection and added pytest test suite

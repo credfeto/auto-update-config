@@ -20,7 +20,7 @@ git@github.com:credfeto/credfeto-database-source-generator.git
 git@github.com:credfeto/credfeto-dotnet-repo-tools.git
 git@github.com:credfeto/credfeto-flatpak-filter.git
 git@github.com:credfeto/package-logs.git
-git@github.com:credfeto/credfeto-systemd.git
+git@github.com:credfeto/credfeto-setup-arch-desktop.git
 git@github.com:credfeto/credfeto-version-constants-generator.git
 git@github.com:credfeto/credfeto-dev-package-cache.git
 git@github.com:credfeto/credfeto-docker-registry.git

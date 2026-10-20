@@ -26,9 +26,9 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - Removed unnecessary pylint suppressions that are no longer needed
 - Fixed missing trailing newline in personal/repos.lst flagged by the pre-commit end-of-file-fixer baseline check
 - Fixed build_personal.py generator to always write a trailing newline to personal/repos.lst so the pre-commit end-of-file-fixer no longer needs to auto-correct it on every run
+- build_personal.py now writes personal/repos.lst sorted case-insensitively so regenerating the list always produces a stable order
 
 ### Changed
-- build_personal.py now writes personal/repos.lst sorted case-insensitively so regenerating the list always produces a stable order
 ### Deprecated
 ### Removed
 - Removed unused branch protection enforcement code and its tests

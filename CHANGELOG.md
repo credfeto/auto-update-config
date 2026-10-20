@@ -28,6 +28,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - Fixed build_personal.py generator to always write a trailing newline to personal/repos.lst so the pre-commit end-of-file-fixer no longer needs to auto-correct it on every run
 
 ### Changed
+- TBD - to be finalized after review
 ### Deprecated
 ### Removed
 - Removed unused branch protection enforcement code and its tests

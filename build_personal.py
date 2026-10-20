@@ -81,9 +81,13 @@ def fetch_repos(graphql_client: GraphqlClient, oauth_token: str) -> list[str]:
     return repositories
 
 
+def _repo_sort_key(url: str) -> str:
+    return url.removesuffix(".git").lower()
+
+
 def update(graphql_client: GraphqlClient, token: str, output_file: pathlib.Path) -> None:
     repos = fetch_repos(graphql_client, token)
-    output_file.write_text("".join(f"{repo}\n" for repo in sorted(repos, key=lambda url: url.removesuffix(".git").lower())))
+    output_file.write_text("".join(f"{repo}\n" for repo in sorted(repos, key=_repo_sort_key)))
 
 
 if __name__ == "__main__":

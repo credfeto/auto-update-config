@@ -1,7 +1,7 @@
 # pylint: disable=missing-class-docstring,too-few-public-methods
 import pytest
 
-from build_personal import make_query, update
+from build_personal import update
 
 
 class _StubGraphqlClient:
@@ -12,11 +12,12 @@ class _StubGraphqlClient:
 
     def execute(self, query, headers):  # pylint: disable=unused-argument
         page_number = self._next_page
-        assert page_number < len(self._pages), f"requested page {page_number} but only {len(self._pages)} exist"
-        expected_cursor = f"cursor-{page_number - 1}" if page_number else None
-        assert query == make_query(expected_cursor), f"page {page_number} not requested with cursor {expected_cursor}"
+        page_count = len(self._pages)
+        assert page_number < page_count, f"page {page_number} requested; {page_count} exist"
+        expected_after = f'after:"cursor-{page_number - 1}"' if page_number else "after:null"
+        assert expected_after in query, f"page {page_number} not requested with {expected_after}"
         self._next_page += 1
-        has_next_page = self._next_page < len(self._pages)
+        has_next_page = self._next_page < page_count
         return {
             "data": {
                 "viewer": {

@@ -14,7 +14,7 @@ n/a (no code)
 
 | Package | Line Coverage |
 | --- | --- |
-| **Overall (Python)** | **88.7%** |
+| **Overall (Python)** | **89.5%** |
 
 ## Shell
 
@@ -22,4 +22,4 @@ excluded
 
 ---
 
-Captured at commit `aa17162408bba8f3200a4f0b789387b5ac98ed17` on 2026-10-20T18:38:55Z.
+Captured at commit `8d5d116c8e21cae3c89e83c36ce693759b4c955c` on 2026-10-20T19:35:58Z.

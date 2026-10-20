@@ -52,3 +52,23 @@ class TestUpdate:
             "git@github.com:credfeto/repo-one.git\n"
             "git@github.com:credfeto/repo-two.git\n"
         )
+
+    def test_repos_written_in_case_insensitive_sorted_order(self, tmp_path):
+        output_file = tmp_path / "repos.lst"
+        client = _StubGraphqlClient(
+            [
+                ("zeta", "git@github.com:credfeto/zeta.git"),
+                ("Beta", "git@github.com:credfeto/Beta.git"),
+                ("alpha", "git@github.com:credfeto/alpha.git"),
+                ("Gamma", "git@github.com:credfeto/Gamma.git"),
+            ]
+        )
+
+        update(client, "token", output_file)
+
+        assert output_file.read_text() == (
+            "git@github.com:credfeto/alpha.git\n"
+            "git@github.com:credfeto/Beta.git\n"
+            "git@github.com:credfeto/Gamma.git\n"
+            "git@github.com:credfeto/zeta.git\n"
+        )

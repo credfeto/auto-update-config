@@ -1,4 +1,6 @@
 # pylint: disable=missing-class-docstring,too-few-public-methods
+import pytest
+
 from build_personal import update
 
 
@@ -60,38 +62,38 @@ class TestUpdate:
             "git@github.com:credfeto/repo-two.git\n"
         )
 
-    def test_repos_written_in_case_insensitive_sorted_order(self, tmp_path):
+    @pytest.mark.parametrize(
+        "pages",
+        [
+            pytest.param(
+                (
+                    [
+                        ("zeta", "git@github.com:credfeto/zeta.git"),
+                        ("Beta", "git@github.com:credfeto/Beta.git"),
+                        ("alpha", "git@github.com:credfeto/alpha.git"),
+                        ("Gamma", "git@github.com:credfeto/Gamma.git"),
+                    ],
+                ),
+                id="single-page",
+            ),
+            pytest.param(
+                (
+                    [
+                        ("zeta", "git@github.com:credfeto/zeta.git"),
+                        ("Beta", "git@github.com:credfeto/Beta.git"),
+                    ],
+                    [
+                        ("alpha", "git@github.com:credfeto/alpha.git"),
+                        ("Gamma", "git@github.com:credfeto/Gamma.git"),
+                    ],
+                ),
+                id="split-across-two-pages",
+            ),
+        ],
+    )
+    def test_repos_written_in_case_insensitive_sorted_order(self, tmp_path, pages):
         output_file = tmp_path / "repos.lst"
-        client = _StubGraphqlClient(
-            [
-                ("zeta", "git@github.com:credfeto/zeta.git"),
-                ("Beta", "git@github.com:credfeto/Beta.git"),
-                ("alpha", "git@github.com:credfeto/alpha.git"),
-                ("Gamma", "git@github.com:credfeto/Gamma.git"),
-            ]
-        )
-
-        update(client, "token", output_file)
-
-        assert output_file.read_text() == (
-            "git@github.com:credfeto/alpha.git\n"
-            "git@github.com:credfeto/Beta.git\n"
-            "git@github.com:credfeto/Gamma.git\n"
-            "git@github.com:credfeto/zeta.git\n"
-        )
-
-    def test_repos_sorted_across_pages(self, tmp_path):
-        output_file = tmp_path / "repos.lst"
-        client = _StubGraphqlClient(
-            [
-                ("zeta", "git@github.com:credfeto/zeta.git"),
-                ("Beta", "git@github.com:credfeto/Beta.git"),
-            ],
-            [
-                ("alpha", "git@github.com:credfeto/alpha.git"),
-                ("Gamma", "git@github.com:credfeto/Gamma.git"),
-            ],
-        )
+        client = _StubGraphqlClient(*pages)
 
         update(client, "token", output_file)
 

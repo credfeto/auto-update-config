@@ -6,8 +6,7 @@ from build_personal import update
 
 class _StubGraphqlClient:
     def __init__(self, *pages):
-        # No pages is served as one empty page, as GitHub does for an account with no repos.
-        self._pages = pages or ([],)
+        self._pages = pages
         self._next_page = 0
 
     def execute(self, query, headers):  # pylint: disable=unused-argument

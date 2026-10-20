@@ -101,3 +101,19 @@ class TestUpdate:
             "git@github.com:credfeto/Gamma.git\n"
             "git@github.com:credfeto/zeta.git\n"
         )
+
+    def test_repo_sorted_before_hyphenated_repo_with_same_prefix(self, tmp_path):
+        output_file = tmp_path / "repos.lst"
+        client = _StubGraphqlClient(
+            [
+                ("credfeto-notes", "git@github.com:credfeto/credfeto-notes.git"),
+                ("credfeto", "git@github.com:credfeto/credfeto.git"),
+            ]
+        )
+
+        update(client, "token", output_file)
+
+        assert output_file.read_text() == (
+            "git@github.com:credfeto/credfeto.git\n"
+            "git@github.com:credfeto/credfeto-notes.git\n"
+        )

@@ -3,15 +3,22 @@ from build_personal import update
 
 
 class _StubGraphqlClient:
-    def __init__(self, repos):
-        self._repos = repos
+    def __init__(self, *pages):
+        self._pages = pages
+        self._next_page = 0
 
     def execute(self, query, headers):  # pylint: disable=unused-argument
+        page_number = self._next_page
+        self._next_page += 1
+        has_next_page = self._next_page < len(self._pages)
         return {
             "data": {
                 "viewer": {
                     "repositories": {
-                        "pageInfo": {"hasNextPage": False, "endCursor": None},
+                        "pageInfo": {
+                            "hasNextPage": has_next_page,
+                            "endCursor": f"cursor-{page_number}" if has_next_page else None,
+                        },
                         "nodes": [
                             {
                                 "name": name,
@@ -20,7 +27,7 @@ class _StubGraphqlClient:
                                 "isArchived": False,
                                 "isFork": False,
                             }
-                            for name, ssh_url in self._repos
+                            for name, ssh_url in self._pages[page_number]
                         ],
                     }
                 }
@@ -62,6 +69,28 @@ class TestUpdate:
                 ("alpha", "git@github.com:credfeto/alpha.git"),
                 ("Gamma", "git@github.com:credfeto/Gamma.git"),
             ]
+        )
+
+        update(client, "token", output_file)
+
+        assert output_file.read_text() == (
+            "git@github.com:credfeto/alpha.git\n"
+            "git@github.com:credfeto/Beta.git\n"
+            "git@github.com:credfeto/Gamma.git\n"
+            "git@github.com:credfeto/zeta.git\n"
+        )
+
+    def test_repos_sorted_across_pages(self, tmp_path):
+        output_file = tmp_path / "repos.lst"
+        client = _StubGraphqlClient(
+            [
+                ("zeta", "git@github.com:credfeto/zeta.git"),
+                ("Beta", "git@github.com:credfeto/Beta.git"),
+            ],
+            [
+                ("alpha", "git@github.com:credfeto/alpha.git"),
+                ("Gamma", "git@github.com:credfeto/Gamma.git"),
+            ],
         )
 
         update(client, "token", output_file)

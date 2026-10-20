@@ -1,16 +1,20 @@
 # pylint: disable=missing-class-docstring,too-few-public-methods
 import pytest
 
-from build_personal import update
+from build_personal import make_query, update
 
 
 class _StubGraphqlClient:
     def __init__(self, *pages):
-        self._pages = pages
+        # No pages is served as one empty page, as GitHub does for an account with no repos.
+        self._pages = pages or ([],)
         self._next_page = 0
 
     def execute(self, query, headers):  # pylint: disable=unused-argument
         page_number = self._next_page
+        assert page_number < len(self._pages), f"requested page {page_number} but only {len(self._pages)} exist"
+        expected_cursor = f"cursor-{page_number - 1}" if page_number else None
+        assert query == make_query(expected_cursor), f"page {page_number} not requested with cursor {expected_cursor}"
         self._next_page += 1
         has_next_page = self._next_page < len(self._pages)
         return {

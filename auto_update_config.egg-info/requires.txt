@@ -4,3 +4,4 @@ feedparser
 
 [dev]
 pytest
+coverage

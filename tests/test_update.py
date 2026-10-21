@@ -3,6 +3,13 @@ import pytest
 
 from build_personal import update
 
+_UNSORTED_REPOS = [
+    ("zeta", "git@github.com:credfeto/zeta.git"),
+    ("Beta", "git@github.com:credfeto/Beta.git"),
+    ("alpha", "git@github.com:credfeto/alpha.git"),
+    ("Gamma", "git@github.com:credfeto/Gamma.git"),
+]
+
 
 class _StubGraphqlClient:
     def __init__(self, *pages):
@@ -69,30 +76,8 @@ class TestUpdate:
     @pytest.mark.parametrize(
         "pages",
         [
-            pytest.param(
-                (
-                    [
-                        ("zeta", "git@github.com:credfeto/zeta.git"),
-                        ("Beta", "git@github.com:credfeto/Beta.git"),
-                        ("alpha", "git@github.com:credfeto/alpha.git"),
-                        ("Gamma", "git@github.com:credfeto/Gamma.git"),
-                    ],
-                ),
-                id="single-page",
-            ),
-            pytest.param(
-                (
-                    [
-                        ("zeta", "git@github.com:credfeto/zeta.git"),
-                        ("Beta", "git@github.com:credfeto/Beta.git"),
-                    ],
-                    [
-                        ("alpha", "git@github.com:credfeto/alpha.git"),
-                        ("Gamma", "git@github.com:credfeto/Gamma.git"),
-                    ],
-                ),
-                id="split-across-two-pages",
-            ),
+            pytest.param((_UNSORTED_REPOS,), id="single-page"),
+            pytest.param((_UNSORTED_REPOS[:2], _UNSORTED_REPOS[2:]), id="split-across-two-pages"),
         ],
     )
     def test_repos_written_in_case_insensitive_sorted_order(self, tmp_path, pages):

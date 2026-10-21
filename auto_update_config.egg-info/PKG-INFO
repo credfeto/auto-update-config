@@ -8,4 +8,5 @@ Requires-Dist: httpx
 Requires-Dist: feedparser
 Provides-Extra: dev
 Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
 Dynamic: license-file

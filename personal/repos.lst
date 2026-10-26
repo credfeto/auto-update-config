@@ -27,7 +27,6 @@ git@github.com:credfeto/credfeto-glance.git
 git@github.com:credfeto/credfeto-global-pre-commit.git
 git@github.com:credfeto/credfeto-inbucket.git
 git@github.com:credfeto/credfeto-linux-package-cache.git
-git@github.com:credfeto/credfeto-local-aur-cache.git
 git@github.com:credfeto/credfeto-monitoring.git
 git@github.com:credfeto/credfeto-mssql.git
 git@github.com:credfeto/credfeto-notes.git

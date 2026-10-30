@@ -15,6 +15,7 @@ EXCLUDED_REPOS = {
     "git@github.com:credfeto/chains.git",
     "git@github.com:credfeto/infobeamer-browser.git",
     "git@github.com:credfeto/credfeto-batch-updates.git",
+    "git@github.com:credfeto/credfeto-memory.git"
 }
 
 

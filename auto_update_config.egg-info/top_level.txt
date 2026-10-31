@@ -1,4 +1,0 @@
-build_personal
-github_client
-tests
-update_repos

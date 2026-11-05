@@ -29,18 +29,18 @@ jobs:
           fetch-depth: 0
 
       - name: "Remove gitignore"
-        run: rm -f "${{env.TARGET}}/.gitignore"
+        run: rm -f "$TARGET/.gitignore"
 
       - name: "Build"
         run: |
-          mkdir "${{env.TARGET}}/"
-          cp packages.json "${{env.TARGET}}/packages.config"
-          cp release.json "${{env.TARGET}}/personal-release.config"
-          cp release.json "${{env.TARGET}}/funfair-release.config"
-          cp personal/repos.lst "${{env.TARGET}}/personal-repos.config"
-          cp funfair/repos.lst "${{env.TARGET}}/funfair-repos.config"
-          cp personal/templates.json "${{env.TARGET}}/personal-templates.config"
-          cp funfair/templates.json "${{env.TARGET}}/funfair-templates.config"
+          mkdir "$TARGET/"
+          cp packages.json "$TARGET/packages.config"
+          cp release.json "$TARGET/personal-release.config"
+          cp release.json "$TARGET/funfair-release.config"
+          cp personal/repos.lst "$TARGET/personal-repos.config"
+          cp funfair/repos.lst "$TARGET/funfair-repos.config"
+          cp personal/templates.json "$TARGET/personal-templates.config"
+          cp funfair/templates.json "$TARGET/funfair-templates.config"
 
       - name: "Deploy"
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4

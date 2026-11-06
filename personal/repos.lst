@@ -50,6 +50,7 @@ git@github.com:credfeto/credfeto-ssh-key-mgr.git
 git@github.com:credfeto/credfeto-ssh-key-server.git
 git@github.com:credfeto/credfeto-ssh-key-server-docker.git
 git@github.com:credfeto/credfeto-traefik.git
+git@github.com:credfeto/credfeto-trmnl.git
 git@github.com:credfeto/credfeto-version-constants-generator.git
 git@github.com:credfeto/credfeto-watchtower.git
 git@github.com:credfeto/credfeto-workflow-mcp.git

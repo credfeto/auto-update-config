@@ -11,10 +11,6 @@ GITHUB_USER = "credfeto"
 GITHUB_TOKEN = os.environ.get("SOURCE_PUSH_TOKEN", "")
 
 EXCLUDED_REPOS = {
-    "git@github.com:credfeto/opnsense-config.git",
-    "git@github.com:credfeto/chains.git",
-    "git@github.com:credfeto/infobeamer-browser.git",
-    "git@github.com:credfeto/credfeto-batch-updates.git",
     "git@github.com:credfeto/credfeto-memory-notes.git"
 }
 

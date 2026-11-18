@@ -406,14 +406,6 @@
                 "exclude": []
         },
         {
-                "packageId": "Credfeto.Random",
-                "type": "Random data support",
-                "exact-match": true,
-                "version-bump-package": true,
-                "prohibit-version-bump-when-referenced": false,
-                "exclude": []
-        },
-        {
                 "packageId": "Credfeto.Services.Startup",
                 "type": "Run on startup services",
                 "exact-match": false,

@@ -32,6 +32,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Deprecated
 ### Removed
 - Removed unused branch protection enforcement code and its tests
+- Removed the retired Credfeto.Random package from packages.json
 ### Deployment Changes
 
 <!--
